@@ -1,0 +1,209 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 5
+-n 3 -fastpaths -xml MUX1to4.twx MUX1to4.ncd -o MUX1to4.twr MUX1to4.pcf
+
+Design file:              MUX1to4.ncd
+Physical constraint file: MUX1to4.pcf
+Device,package,speed:     xc3s500e,fg320,-5 (PRODUCTION 1.27 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock MUX_SEL<0>
+------------+------------+------------+-------------------+--------+
+            |Max Setup to|Max Hold to |                   | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s)  | Phase  |
+------------+------------+------------+-------------------+--------+
+MUX_In<0>   |   -1.401(R)|    2.856(R)|MUX_OUT1_not0001   |   0.000|
+            |   -1.726(F)|    3.275(F)|MUX_OUT2_cmp_eq0000|   0.000|
+            |   -0.493(F)|    2.297(F)|MUX_OUT3_cmp_eq0000|   0.000|
+            |    0.217(F)|    1.599(F)|MUX_OUT4_cmp_eq0000|   0.000|
+MUX_In<1>   |   -1.196(R)|    2.726(R)|MUX_OUT1_not0001   |   0.000|
+            |   -1.401(F)|    2.879(F)|MUX_OUT2_cmp_eq0000|   0.000|
+            |   -0.782(F)|    2.349(F)|MUX_OUT3_cmp_eq0000|   0.000|
+            |    2.571(F)|    0.938(F)|MUX_OUT4_cmp_eq0000|   0.000|
+MUX_In<2>   |   -1.392(R)|    2.872(R)|MUX_OUT1_not0001   |   0.000|
+            |   -1.449(F)|    2.930(F)|MUX_OUT2_cmp_eq0000|   0.000|
+            |   -1.307(F)|    2.770(F)|MUX_OUT3_cmp_eq0000|   0.000|
+            |    2.563(F)|    0.948(F)|MUX_OUT4_cmp_eq0000|   0.000|
+MUX_In<3>   |   -0.850(R)|    2.395(R)|MUX_OUT1_not0001   |   0.000|
+            |   -0.049(F)|    1.488(F)|MUX_OUT2_cmp_eq0000|   0.000|
+            |   -0.855(F)|    2.398(F)|MUX_OUT3_cmp_eq0000|   0.000|
+            |    2.571(F)|    0.938(F)|MUX_OUT4_cmp_eq0000|   0.000|
+MUX_In<4>   |   -1.640(R)|    3.156(R)|MUX_OUT1_not0001   |   0.000|
+            |   -1.261(F)|    2.911(F)|MUX_OUT2_cmp_eq0000|   0.000|
+            |   -1.956(F)|    3.572(F)|MUX_OUT3_cmp_eq0000|   0.000|
+            |    3.202(F)|    0.150(F)|MUX_OUT4_cmp_eq0000|   0.000|
+MUX_In<5>   |   -1.356(R)|    2.913(R)|MUX_OUT1_not0001   |   0.000|
+            |   -1.631(F)|    3.152(F)|MUX_OUT2_cmp_eq0000|   0.000|
+            |   -1.694(F)|    3.349(F)|MUX_OUT3_cmp_eq0000|   0.000|
+            |    3.202(F)|    0.150(F)|MUX_OUT4_cmp_eq0000|   0.000|
+MUX_In<6>   |   -1.333(R)|    3.162(R)|MUX_OUT1_not0001   |   0.000|
+            |   -1.441(F)|    2.925(F)|MUX_OUT2_cmp_eq0000|   0.000|
+            |   -0.631(F)|    2.396(F)|MUX_OUT3_cmp_eq0000|   0.000|
+            |    2.140(F)|    1.476(F)|MUX_OUT4_cmp_eq0000|   0.000|
+MUX_In<7>   |   -1.953(R)|    3.661(R)|MUX_OUT1_not0001   |   0.000|
+            |   -1.455(F)|    3.022(F)|MUX_OUT2_cmp_eq0000|   0.000|
+            |   -1.299(F)|    2.953(F)|MUX_OUT3_cmp_eq0000|   0.000|
+            |    2.140(F)|    1.476(F)|MUX_OUT4_cmp_eq0000|   0.000|
+------------+------------+------------+-------------------+--------+
+
+Setup/Hold to clock MUX_SEL<1>
+------------+------------+------------+-------------------+--------+
+            |Max Setup to|Max Hold to |                   | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s)  | Phase  |
+------------+------------+------------+-------------------+--------+
+MUX_In<0>   |   -1.146(R)|    2.537(R)|MUX_OUT1_not0001   |   0.000|
+            |   -1.452(F)|    2.933(F)|MUX_OUT2_cmp_eq0000|   0.000|
+            |   -0.569(F)|    2.392(F)|MUX_OUT3_cmp_eq0000|   0.000|
+            |    0.137(F)|    1.699(F)|MUX_OUT4_cmp_eq0000|   0.000|
+MUX_In<1>   |   -0.941(R)|    2.407(R)|MUX_OUT1_not0001   |   0.000|
+            |   -1.127(F)|    2.537(F)|MUX_OUT2_cmp_eq0000|   0.000|
+            |   -0.858(F)|    2.444(F)|MUX_OUT3_cmp_eq0000|   0.000|
+            |    2.491(F)|    1.038(F)|MUX_OUT4_cmp_eq0000|   0.000|
+MUX_In<2>   |   -1.137(R)|    2.553(R)|MUX_OUT1_not0001   |   0.000|
+            |   -1.175(F)|    2.588(F)|MUX_OUT2_cmp_eq0000|   0.000|
+            |   -1.383(F)|    2.865(F)|MUX_OUT3_cmp_eq0000|   0.000|
+            |    2.483(F)|    1.048(F)|MUX_OUT4_cmp_eq0000|   0.000|
+MUX_In<3>   |   -0.595(R)|    2.076(R)|MUX_OUT1_not0001   |   0.000|
+            |    0.225(F)|    1.146(F)|MUX_OUT2_cmp_eq0000|   0.000|
+            |   -0.931(F)|    2.493(F)|MUX_OUT3_cmp_eq0000|   0.000|
+            |    2.491(F)|    1.038(F)|MUX_OUT4_cmp_eq0000|   0.000|
+MUX_In<4>   |   -1.385(R)|    2.837(R)|MUX_OUT1_not0001   |   0.000|
+            |   -0.987(F)|    2.569(F)|MUX_OUT2_cmp_eq0000|   0.000|
+            |   -2.032(F)|    3.667(F)|MUX_OUT3_cmp_eq0000|   0.000|
+            |    3.122(F)|    0.250(F)|MUX_OUT4_cmp_eq0000|   0.000|
+MUX_In<5>   |   -1.101(R)|    2.594(R)|MUX_OUT1_not0001   |   0.000|
+            |   -1.357(F)|    2.810(F)|MUX_OUT2_cmp_eq0000|   0.000|
+            |   -1.770(F)|    3.444(F)|MUX_OUT3_cmp_eq0000|   0.000|
+            |    3.122(F)|    0.250(F)|MUX_OUT4_cmp_eq0000|   0.000|
+MUX_In<6>   |   -1.078(R)|    2.843(R)|MUX_OUT1_not0001   |   0.000|
+            |   -1.167(F)|    2.583(F)|MUX_OUT2_cmp_eq0000|   0.000|
+            |   -0.707(F)|    2.491(F)|MUX_OUT3_cmp_eq0000|   0.000|
+            |    2.060(F)|    1.576(F)|MUX_OUT4_cmp_eq0000|   0.000|
+MUX_In<7>   |   -1.698(R)|    3.342(R)|MUX_OUT1_not0001   |   0.000|
+            |   -1.181(F)|    2.680(F)|MUX_OUT2_cmp_eq0000|   0.000|
+            |   -1.375(F)|    3.048(F)|MUX_OUT3_cmp_eq0000|   0.000|
+            |    2.060(F)|    1.576(F)|MUX_OUT4_cmp_eq0000|   0.000|
+------------+------------+------------+-------------------+--------+
+
+Clock MUX_SEL<0> to Pad
+------------+------------+-------------------+--------+
+            | clk (edge) |                   | Clock  |
+Destination |   to PAD   |Internal Clock(s)  | Phase  |
+------------+------------+-------------------+--------+
+MUX_OUT1<0> |    7.066(R)|MUX_OUT1_not0001   |   0.000|
+MUX_OUT1<1> |    7.158(R)|MUX_OUT1_not0001   |   0.000|
+MUX_OUT1<2> |    7.129(R)|MUX_OUT1_not0001   |   0.000|
+MUX_OUT1<3> |    7.007(R)|MUX_OUT1_not0001   |   0.000|
+MUX_OUT1<4> |    7.364(R)|MUX_OUT1_not0001   |   0.000|
+MUX_OUT1<5> |    7.323(R)|MUX_OUT1_not0001   |   0.000|
+MUX_OUT1<6> |    8.066(R)|MUX_OUT1_not0001   |   0.000|
+MUX_OUT1<7> |    8.075(R)|MUX_OUT1_not0001   |   0.000|
+MUX_OUT2<0> |    7.508(F)|MUX_OUT2_cmp_eq0000|   0.000|
+MUX_OUT2<1> |    7.128(F)|MUX_OUT2_cmp_eq0000|   0.000|
+MUX_OUT2<2> |    7.163(F)|MUX_OUT2_cmp_eq0000|   0.000|
+MUX_OUT2<3> |    6.269(F)|MUX_OUT2_cmp_eq0000|   0.000|
+MUX_OUT2<4> |    7.528(F)|MUX_OUT2_cmp_eq0000|   0.000|
+MUX_OUT2<5> |    7.377(F)|MUX_OUT2_cmp_eq0000|   0.000|
+MUX_OUT2<6> |    7.165(F)|MUX_OUT2_cmp_eq0000|   0.000|
+MUX_OUT2<7> |    7.406(F)|MUX_OUT2_cmp_eq0000|   0.000|
+MUX_OUT3<0> |    7.527(F)|MUX_OUT3_cmp_eq0000|   0.000|
+MUX_OUT3<1> |    7.031(F)|MUX_OUT3_cmp_eq0000|   0.000|
+MUX_OUT3<2> |    7.035(F)|MUX_OUT3_cmp_eq0000|   0.000|
+MUX_OUT3<3> |    7.003(F)|MUX_OUT3_cmp_eq0000|   0.000|
+MUX_OUT3<4> |    7.817(F)|MUX_OUT3_cmp_eq0000|   0.000|
+MUX_OUT3<5> |    7.783(F)|MUX_OUT3_cmp_eq0000|   0.000|
+MUX_OUT3<6> |    7.495(F)|MUX_OUT3_cmp_eq0000|   0.000|
+MUX_OUT3<7> |    7.559(F)|MUX_OUT3_cmp_eq0000|   0.000|
+MUX_OUT4<0> |    7.168(F)|MUX_OUT4_cmp_eq0000|   0.000|
+MUX_OUT4<1> |    9.862(F)|MUX_OUT4_cmp_eq0000|   0.000|
+MUX_OUT4<2> |    8.401(F)|MUX_OUT4_cmp_eq0000|   0.000|
+MUX_OUT4<3> |    8.391(F)|MUX_OUT4_cmp_eq0000|   0.000|
+MUX_OUT4<4> |    8.127(F)|MUX_OUT4_cmp_eq0000|   0.000|
+MUX_OUT4<5> |    7.603(F)|MUX_OUT4_cmp_eq0000|   0.000|
+MUX_OUT4<6> |    9.497(F)|MUX_OUT4_cmp_eq0000|   0.000|
+MUX_OUT4<7> |    9.757(F)|MUX_OUT4_cmp_eq0000|   0.000|
+------------+------------+-------------------+--------+
+
+Clock MUX_SEL<1> to Pad
+------------+------------+-------------------+--------+
+            | clk (edge) |                   | Clock  |
+Destination |   to PAD   |Internal Clock(s)  | Phase  |
+------------+------------+-------------------+--------+
+MUX_OUT1<0> |    6.747(R)|MUX_OUT1_not0001   |   0.000|
+MUX_OUT1<1> |    6.839(R)|MUX_OUT1_not0001   |   0.000|
+MUX_OUT1<2> |    6.810(R)|MUX_OUT1_not0001   |   0.000|
+MUX_OUT1<3> |    6.688(R)|MUX_OUT1_not0001   |   0.000|
+MUX_OUT1<4> |    7.045(R)|MUX_OUT1_not0001   |   0.000|
+MUX_OUT1<5> |    7.004(R)|MUX_OUT1_not0001   |   0.000|
+MUX_OUT1<6> |    7.747(R)|MUX_OUT1_not0001   |   0.000|
+MUX_OUT1<7> |    7.756(R)|MUX_OUT1_not0001   |   0.000|
+MUX_OUT2<0> |    7.166(F)|MUX_OUT2_cmp_eq0000|   0.000|
+MUX_OUT2<1> |    6.786(F)|MUX_OUT2_cmp_eq0000|   0.000|
+MUX_OUT2<2> |    6.821(F)|MUX_OUT2_cmp_eq0000|   0.000|
+MUX_OUT2<3> |    5.927(F)|MUX_OUT2_cmp_eq0000|   0.000|
+MUX_OUT2<4> |    7.186(F)|MUX_OUT2_cmp_eq0000|   0.000|
+MUX_OUT2<5> |    7.035(F)|MUX_OUT2_cmp_eq0000|   0.000|
+MUX_OUT2<6> |    6.823(F)|MUX_OUT2_cmp_eq0000|   0.000|
+MUX_OUT2<7> |    7.064(F)|MUX_OUT2_cmp_eq0000|   0.000|
+MUX_OUT3<0> |    7.622(F)|MUX_OUT3_cmp_eq0000|   0.000|
+MUX_OUT3<1> |    7.126(F)|MUX_OUT3_cmp_eq0000|   0.000|
+MUX_OUT3<2> |    7.130(F)|MUX_OUT3_cmp_eq0000|   0.000|
+MUX_OUT3<3> |    7.098(F)|MUX_OUT3_cmp_eq0000|   0.000|
+MUX_OUT3<4> |    7.912(F)|MUX_OUT3_cmp_eq0000|   0.000|
+MUX_OUT3<5> |    7.878(F)|MUX_OUT3_cmp_eq0000|   0.000|
+MUX_OUT3<6> |    7.590(F)|MUX_OUT3_cmp_eq0000|   0.000|
+MUX_OUT3<7> |    7.654(F)|MUX_OUT3_cmp_eq0000|   0.000|
+MUX_OUT4<0> |    7.268(F)|MUX_OUT4_cmp_eq0000|   0.000|
+MUX_OUT4<1> |    9.962(F)|MUX_OUT4_cmp_eq0000|   0.000|
+MUX_OUT4<2> |    8.501(F)|MUX_OUT4_cmp_eq0000|   0.000|
+MUX_OUT4<3> |    8.491(F)|MUX_OUT4_cmp_eq0000|   0.000|
+MUX_OUT4<4> |    8.227(F)|MUX_OUT4_cmp_eq0000|   0.000|
+MUX_OUT4<5> |    7.703(F)|MUX_OUT4_cmp_eq0000|   0.000|
+MUX_OUT4<6> |    9.597(F)|MUX_OUT4_cmp_eq0000|   0.000|
+MUX_OUT4<7> |    9.857(F)|MUX_OUT4_cmp_eq0000|   0.000|
+------------+------------+-------------------+--------+
+
+
+Analysis completed Sun Oct 26 06:51:42 2014 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 176 MB
+
+
+

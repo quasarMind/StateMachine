@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "D:/ASSGN3_Final/SCHEMATIC2_ITER/stt_2.xst" -ofn "D:/ASSGN3_Final/SCHEMATIC2_ITER/stt_2.syr" 

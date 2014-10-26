@@ -1,0 +1,4 @@
+vhdl work "MUX4to1.vhd"
+vhdl work "ALU.vhd"
+vhdl work "Adder.vhd"
+vhdl work "ALU_T.vhf"

@@ -1,0 +1,99 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 5
+-n 3 -fastpaths -xml ALU.twx ALU.ncd -o ALU.twr ALU.pcf
+
+Design file:              ALU.ncd
+Physical constraint file: ALU.pcf
+Device,package,speed:     xc3s500e,fg320,-5 (PRODUCTION 1.27 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+ALU_IN1<0>     |ALU_OUT1<0>    |    6.733|
+ALU_IN1<0>     |ALU_OUT2<0>    |    5.954|
+ALU_IN1<0>     |ALU_OUT3<0>    |    4.821|
+ALU_IN1<1>     |ALU_OUT1<1>    |    6.044|
+ALU_IN1<1>     |ALU_OUT2<1>    |    6.001|
+ALU_IN1<1>     |ALU_OUT3<1>    |    4.740|
+ALU_IN1<2>     |ALU_OUT1<2>    |    6.439|
+ALU_IN1<2>     |ALU_OUT2<2>    |    6.239|
+ALU_IN1<2>     |ALU_OUT3<2>    |    5.191|
+ALU_IN1<3>     |ALU_OUT1<3>    |    6.152|
+ALU_IN1<3>     |ALU_OUT2<3>    |    6.895|
+ALU_IN1<3>     |ALU_OUT3<3>    |    4.890|
+ALU_IN1<4>     |ALU_OUT1<4>    |    6.315|
+ALU_IN1<4>     |ALU_OUT2<4>    |    6.617|
+ALU_IN1<4>     |ALU_OUT3<4>    |    4.681|
+ALU_IN1<5>     |ALU_OUT1<5>    |    5.847|
+ALU_IN1<5>     |ALU_OUT2<5>    |    6.023|
+ALU_IN1<5>     |ALU_OUT3<5>    |    4.709|
+ALU_IN1<6>     |ALU_OUT1<6>    |    6.227|
+ALU_IN1<6>     |ALU_OUT2<6>    |    5.696|
+ALU_IN1<6>     |ALU_OUT3<6>    |    4.233|
+ALU_IN1<7>     |ALU_OUT1<7>    |    5.611|
+ALU_IN1<7>     |ALU_OUT2<7>    |    5.609|
+ALU_IN1<7>     |ALU_OUT3<7>    |    4.250|
+ALU_IN2<0>     |ALU_OUT1<0>    |    5.949|
+ALU_IN2<0>     |ALU_OUT2<0>    |    5.277|
+ALU_IN2<1>     |ALU_OUT1<1>    |    5.643|
+ALU_IN2<1>     |ALU_OUT2<1>    |    5.544|
+ALU_IN2<2>     |ALU_OUT1<2>    |    5.873|
+ALU_IN2<2>     |ALU_OUT2<2>    |    5.729|
+ALU_IN2<3>     |ALU_OUT1<3>    |    5.530|
+ALU_IN2<3>     |ALU_OUT2<3>    |    6.302|
+ALU_IN2<4>     |ALU_OUT1<4>    |    6.284|
+ALU_IN2<4>     |ALU_OUT2<4>    |    6.552|
+ALU_IN2<5>     |ALU_OUT1<5>    |    5.818|
+ALU_IN2<5>     |ALU_OUT2<5>    |    6.044|
+ALU_IN2<6>     |ALU_OUT1<6>    |    5.821|
+ALU_IN2<6>     |ALU_OUT2<6>    |    5.268|
+ALU_IN2<7>     |ALU_OUT1<7>    |    5.647|
+ALU_IN2<7>     |ALU_OUT2<7>    |    5.612|
+---------------+---------------+---------+
+
+
+Analysis completed Sun Oct 26 06:21:29 2014 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 176 MB
+
+
+

@@ -1,0 +1,2 @@
+vhdl work "netgen/par/MC_timesim.vhd"
+vhdl work "MC_TEST.vhd"

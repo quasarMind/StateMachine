@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "D:/ASSGN3_Final/SCHEMATIC2_ITER/ALU_T.xst" -ofn "D:/ASSGN3_Final/SCHEMATIC2_ITER/ALU_T.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-5 ALU_T.ngc ALU_T.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o ALU_T_map.ncd ALU_T.ngd ALU_T.pcf 
+par -w -intstyle ise -ol high -t 1 ALU_T_map.ncd ALU_T.ncd ALU_T.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml ALU_T.twx ALU_T.ncd -o ALU_T.twr ALU_T.pcf 
+sch2sym -intstyle ise -family spartan3e -refsym ALU_T D:/ASSGN3_Final/SCHEMATIC2_ITER/ALU_T.sch D:/ASSGN3_Final/SCHEMATIC2_ITER/ALU_T.sym 

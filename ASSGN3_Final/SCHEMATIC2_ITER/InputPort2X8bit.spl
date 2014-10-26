@@ -1,0 +1,12 @@
+[Inputs]
+ENABLE_PORT_A
+ENABLE_PORT_B
+CLK
+RESET
+=A_PORT[7:0]=
+=B_PORT[7:0]=
+=C_BUS_IN[7:0]=
+=OUTPUT_SELECT[1:0]=
+[Outputs]
+=C_BUS_OUT[7:0]=
+[BiDir]

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "D:/ASSGN3_Final/SCHEMATIC2_ITER/MC_MC_sch_tb_isim_map.exe" -prj "D:/ASSGN3_Final/SCHEMATIC2_ITER/MC_MC_sch_tb_map.prj" "work.MC_MC_sch_tb" 

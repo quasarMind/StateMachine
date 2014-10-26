@@ -1,0 +1,8 @@
+[Inputs]
+=ALU_IN1[7:0]=
+=ALU_IN2[7:0]=
+[Outputs]
+=ALU_OUT1[7:0]=
+=ALU_OUT2[7:0]=
+=ALU_OUT3[7:0]=
+[BiDir]

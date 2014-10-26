@@ -1,0 +1,347 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Mapping Report File for Design 'MC'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off
+-c 100 -o MC_map.ncd MC.ngd MC.pcf 
+Target Device  : xc3s500e
+Target Package : fg320
+Target Speed   : -5
+Mapper Version : spartan3e -- $Revision: 1.55 $
+Mapped Date    : Sun Oct 26 19:07:14 2014
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:   18
+Logic Utilization:
+Logic Distribution:
+    Number of Slices containing only related logic:       0 out of       0   0%
+    Number of Slices containing unrelated logic:          0 out of       0   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Number of bonded IOBs:                 26 out of     232   11%
+
+Average Fanout of Non-Clock Nets:                1.00
+
+Peak Memory Usage:  304 MB
+Total REAL time to MAP completion:  1 secs 
+Total CPU time to MAP completion:   1 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:MapLib:701 - Signal FF_PRESET connected to top level port FF_PRESET has
+   been removed.
+WARNING:MapLib:701 - Signal B_InPort<7> connected to top level port B_InPort<7>
+   has been removed.
+WARNING:MapLib:701 - Signal B_InPort<6> connected to top level port B_InPort<6>
+   has been removed.
+WARNING:MapLib:701 - Signal B_InPort<5> connected to top level port B_InPort<5>
+   has been removed.
+WARNING:MapLib:701 - Signal B_InPort<4> connected to top level port B_InPort<4>
+   has been removed.
+WARNING:MapLib:701 - Signal B_InPort<3> connected to top level port B_InPort<3>
+   has been removed.
+WARNING:MapLib:701 - Signal B_InPort<2> connected to top level port B_InPort<2>
+   has been removed.
+WARNING:MapLib:701 - Signal B_InPort<1> connected to top level port B_InPort<1>
+   has been removed.
+WARNING:MapLib:701 - Signal B_InPort<0> connected to top level port B_InPort<0>
+   has been removed.
+WARNING:MapLib:701 - Signal A_InPort<7> connected to top level port A_InPort<7>
+   has been removed.
+WARNING:MapLib:701 - Signal A_InPort<6> connected to top level port A_InPort<6>
+   has been removed.
+WARNING:MapLib:701 - Signal A_InPort<5> connected to top level port A_InPort<5>
+   has been removed.
+WARNING:MapLib:701 - Signal A_InPort<4> connected to top level port A_InPort<4>
+   has been removed.
+WARNING:MapLib:701 - Signal A_InPort<3> connected to top level port A_InPort<3>
+   has been removed.
+WARNING:MapLib:701 - Signal A_InPort<2> connected to top level port A_InPort<2>
+   has been removed.
+WARNING:MapLib:701 - Signal A_InPort<1> connected to top level port A_InPort<1>
+   has been removed.
+WARNING:MapLib:701 - Signal A_InPort<0> connected to top level port A_InPort<0>
+   has been removed.
+WARNING:MapLib:701 - Signal CLK connected to top level port CLK has been
+   removed.
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network ReRun has no load.
+INFO:LIT:395 - The above info message is repeated 1 more times for the following
+   (max. 5 shown):
+   Programme_Start
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+  38 block(s) removed
+  25 block(s) optimized away
+  39 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal "CLK_BUFGP/IBUFG" is sourceless and has been removed.
+ Sourceless block "CLK_BUFGP/BUFG" (CKBUF) removed.
+  The signal "CLK_BUFGP" is sourceless and has been removed.
+   Sourceless block "XLXI_4/FLIPFLOP_OUT_0" (FF) removed.
+    The signal "XLXI_4/FLIPFLOP_OUT<0>" is sourceless and has been removed.
+
+The trimmed logic reported below is either:
+   1. part of a cycle
+   2. part of disabled logic
+   3. a side-effect of other trimmed logic
+
+The signal "A_InPort<0>" is unused and has been removed.
+ Unused block "A_InPort<0>" (PAD) removed.
+The signal "A_InPort<1>" is unused and has been removed.
+ Unused block "A_InPort<1>" (PAD) removed.
+The signal "A_InPort<2>" is unused and has been removed.
+ Unused block "A_InPort<2>" (PAD) removed.
+The signal "A_InPort<3>" is unused and has been removed.
+ Unused block "A_InPort<3>" (PAD) removed.
+The signal "A_InPort<4>" is unused and has been removed.
+ Unused block "A_InPort<4>" (PAD) removed.
+The signal "A_InPort<5>" is unused and has been removed.
+ Unused block "A_InPort<5>" (PAD) removed.
+The signal "A_InPort<6>" is unused and has been removed.
+ Unused block "A_InPort<6>" (PAD) removed.
+The signal "A_InPort<7>" is unused and has been removed.
+ Unused block "A_InPort<7>" (PAD) removed.
+The signal "A_InPort_0_IBUF" is unused and has been removed.
+ Unused block "A_InPort_0_IBUF" (BUF) removed.
+The signal "A_InPort_1_IBUF" is unused and has been removed.
+ Unused block "A_InPort_1_IBUF" (BUF) removed.
+The signal "A_InPort_2_IBUF" is unused and has been removed.
+ Unused block "A_InPort_2_IBUF" (BUF) removed.
+The signal "A_InPort_3_IBUF" is unused and has been removed.
+ Unused block "A_InPort_3_IBUF" (BUF) removed.
+The signal "A_InPort_4_IBUF" is unused and has been removed.
+ Unused block "A_InPort_4_IBUF" (BUF) removed.
+The signal "A_InPort_5_IBUF" is unused and has been removed.
+ Unused block "A_InPort_5_IBUF" (BUF) removed.
+The signal "A_InPort_6_IBUF" is unused and has been removed.
+ Unused block "A_InPort_6_IBUF" (BUF) removed.
+The signal "A_InPort_7_IBUF" is unused and has been removed.
+ Unused block "A_InPort_7_IBUF" (BUF) removed.
+The signal "B_InPort<0>" is unused and has been removed.
+ Unused block "B_InPort<0>" (PAD) removed.
+The signal "B_InPort<1>" is unused and has been removed.
+ Unused block "B_InPort<1>" (PAD) removed.
+The signal "B_InPort<2>" is unused and has been removed.
+ Unused block "B_InPort<2>" (PAD) removed.
+The signal "B_InPort<3>" is unused and has been removed.
+ Unused block "B_InPort<3>" (PAD) removed.
+The signal "B_InPort<4>" is unused and has been removed.
+ Unused block "B_InPort<4>" (PAD) removed.
+The signal "B_InPort<5>" is unused and has been removed.
+ Unused block "B_InPort<5>" (PAD) removed.
+The signal "B_InPort<6>" is unused and has been removed.
+ Unused block "B_InPort<6>" (PAD) removed.
+The signal "B_InPort<7>" is unused and has been removed.
+ Unused block "B_InPort<7>" (PAD) removed.
+The signal "B_InPort_0_IBUF" is unused and has been removed.
+ Unused block "B_InPort_0_IBUF" (BUF) removed.
+The signal "B_InPort_1_IBUF" is unused and has been removed.
+ Unused block "B_InPort_1_IBUF" (BUF) removed.
+The signal "B_InPort_2_IBUF" is unused and has been removed.
+ Unused block "B_InPort_2_IBUF" (BUF) removed.
+The signal "B_InPort_3_IBUF" is unused and has been removed.
+ Unused block "B_InPort_3_IBUF" (BUF) removed.
+The signal "B_InPort_4_IBUF" is unused and has been removed.
+ Unused block "B_InPort_4_IBUF" (BUF) removed.
+The signal "B_InPort_5_IBUF" is unused and has been removed.
+ Unused block "B_InPort_5_IBUF" (BUF) removed.
+The signal "B_InPort_6_IBUF" is unused and has been removed.
+ Unused block "B_InPort_6_IBUF" (BUF) removed.
+The signal "B_InPort_7_IBUF" is unused and has been removed.
+ Unused block "B_InPort_7_IBUF" (BUF) removed.
+The signal "CLK" is unused and has been removed.
+ Unused block "CLK" (PAD) removed.
+The signal "FF_PRESET" is unused and has been removed.
+ Unused block "FF_PRESET" (PAD) removed.
+The signal "FF_PRESET_IBUF" is unused and has been removed.
+ Unused block "FF_PRESET_IBUF" (BUF) removed.
+The signal "N1" is unused and has been removed.
+Unused block "CLK_BUFGP/IBUFG" (CKBUF) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+FDCE 		XLXI_10/A_OUT_0
+   optimized to 0
+FDCE 		XLXI_10/A_OUT_1
+   optimized to 0
+FDCE 		XLXI_10/A_OUT_2
+   optimized to 0
+FDCE 		XLXI_10/A_OUT_3
+   optimized to 0
+FDCE 		XLXI_10/A_OUT_4
+   optimized to 0
+FDCE 		XLXI_10/A_OUT_5
+   optimized to 0
+FDCE 		XLXI_10/A_OUT_6
+   optimized to 0
+FDCE 		XLXI_10/A_OUT_7
+   optimized to 0
+FDCE 		XLXI_10/B_OUT_0
+   optimized to 0
+FDCE 		XLXI_10/B_OUT_1
+   optimized to 0
+FDCE 		XLXI_10/B_OUT_2
+   optimized to 0
+FDCE 		XLXI_10/B_OUT_3
+   optimized to 0
+FDCE 		XLXI_10/B_OUT_4
+   optimized to 0
+FDCE 		XLXI_10/B_OUT_5
+   optimized to 0
+FDCE 		XLXI_10/B_OUT_6
+   optimized to 0
+FDCE 		XLXI_10/B_OUT_7
+   optimized to 0
+FDCP 		XLXI_4/FLIPFLOP_OUT_0_1
+   optimized to 0
+FDCP 		XLXI_4/FLIPFLOP_OUT_1
+   optimized to 0
+FDCP 		XLXI_4/FLIPFLOP_OUT_2
+   optimized to 0
+FDCP 		XLXI_4/FLIPFLOP_OUT_3
+   optimized to 0
+FDCP 		XLXI_4/FLIPFLOP_OUT_4
+   optimized to 0
+FDCP 		XLXI_4/FLIPFLOP_OUT_5
+   optimized to 0
+FDCP 		XLXI_4/FLIPFLOP_OUT_6
+   optimized to 0
+FDCP 		XLXI_4/FLIPFLOP_OUT_7
+   optimized to 0
+VCC 		XST_VCC
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ALU_TCarryOut                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| ALU_T_CarryIn                      | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ALU_T_OutPut<0>                    | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| ALU_T_OutPut<1>                    | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| ALU_T_OutPut<2>                    | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| ALU_T_OutPut<3>                    | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| ALU_T_OutPut<4>                    | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| ALU_T_OutPut<5>                    | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| ALU_T_OutPut<6>                    | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| ALU_T_OutPut<7>                    | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| OutPort_A_Out<0>                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| OutPort_A_Out<1>                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| OutPort_A_Out<2>                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| OutPort_A_Out<3>                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| OutPort_A_Out<4>                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| OutPort_A_Out<5>                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| OutPort_A_Out<6>                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| OutPort_A_Out<7>                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| OutPort_B_Out<0>                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| OutPort_B_Out<1>                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| OutPort_B_Out<2>                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| OutPort_B_Out<3>                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| OutPort_B_Out<4>                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| OutPort_B_Out<5>                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| OutPort_B_Out<6>                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| OutPort_B_Out<7>                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+This design was not run using timing mode.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+No control set information for this architecture.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

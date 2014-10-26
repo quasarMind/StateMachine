@@ -1,0 +1,7 @@
+[Inputs]
+CLK
+ENABLE_ROM
+=ROM_ADDR[5:0]=
+[Outputs]
+=ROM_DATA[7:0]=
+[BiDir]

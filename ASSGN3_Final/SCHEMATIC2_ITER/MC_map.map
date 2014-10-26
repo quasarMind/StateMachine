@@ -1,0 +1,94 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Map Application Log File for Design 'MC'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off
+-c 100 -o MC_map.ncd MC.ngd MC.pcf 
+Target Device  : xc3s500e
+Target Package : fg320
+Target Speed   : -5
+Mapper Version : spartan3e -- $Revision: 1.55 $
+Mapped Date    : Sun Oct 26 19:07:14 2014
+
+Mapping design into LUTs...
+WARNING:MapLib:701 - Signal FF_PRESET connected to top level port FF_PRESET has
+   been removed.
+WARNING:MapLib:701 - Signal B_InPort<7> connected to top level port B_InPort<7>
+   has been removed.
+WARNING:MapLib:701 - Signal B_InPort<6> connected to top level port B_InPort<6>
+   has been removed.
+WARNING:MapLib:701 - Signal B_InPort<5> connected to top level port B_InPort<5>
+   has been removed.
+WARNING:MapLib:701 - Signal B_InPort<4> connected to top level port B_InPort<4>
+   has been removed.
+WARNING:MapLib:701 - Signal B_InPort<3> connected to top level port B_InPort<3>
+   has been removed.
+WARNING:MapLib:701 - Signal B_InPort<2> connected to top level port B_InPort<2>
+   has been removed.
+WARNING:MapLib:701 - Signal B_InPort<1> connected to top level port B_InPort<1>
+   has been removed.
+WARNING:MapLib:701 - Signal B_InPort<0> connected to top level port B_InPort<0>
+   has been removed.
+WARNING:MapLib:701 - Signal A_InPort<7> connected to top level port A_InPort<7>
+   has been removed.
+WARNING:MapLib:701 - Signal A_InPort<6> connected to top level port A_InPort<6>
+   has been removed.
+WARNING:MapLib:701 - Signal A_InPort<5> connected to top level port A_InPort<5>
+   has been removed.
+WARNING:MapLib:701 - Signal A_InPort<4> connected to top level port A_InPort<4>
+   has been removed.
+WARNING:MapLib:701 - Signal A_InPort<3> connected to top level port A_InPort<3>
+   has been removed.
+WARNING:MapLib:701 - Signal A_InPort<2> connected to top level port A_InPort<2>
+   has been removed.
+WARNING:MapLib:701 - Signal A_InPort<1> connected to top level port A_InPort<1>
+   has been removed.
+WARNING:MapLib:701 - Signal A_InPort<0> connected to top level port A_InPort<0>
+   has been removed.
+WARNING:MapLib:701 - Signal CLK connected to top level port CLK has been
+   removed.
+Running directed packing...
+Running delay-based LUT packing...
+Running related packing...
+Updating timing models...
+
+Design Summary
+--------------
+
+Design Summary:
+Number of errors:      0
+Number of warnings:   18
+Logic Utilization:
+Logic Distribution:
+    Number of Slices containing only related logic:       0 out of       0   0%
+    Number of Slices containing unrelated logic:          0 out of       0   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Number of bonded IOBs:                 26 out of     232   11%
+
+Average Fanout of Non-Clock Nets:                1.00
+
+Peak Memory Usage:  304 MB
+Total REAL time to MAP completion:  1 secs 
+Total CPU time to MAP completion:   1 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Mapping completed.
+See MAP report file "MC_map.mrp" for details.

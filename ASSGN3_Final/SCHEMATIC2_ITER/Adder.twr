@@ -1,0 +1,156 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 5
+-n 3 -fastpaths -xml Adder.twx Adder.ncd -o Adder.twr Adder.pcf
+
+Design file:              Adder.ncd
+Physical constraint file: Adder.pcf
+Device,package,speed:     xc3s500e,fg320,-5 (PRODUCTION 1.27 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+Adder_carryin  |Adder_carryout |   11.825|
+Adder_carryin  |Adder_sum<0>   |    6.273|
+Adder_carryin  |Adder_sum<1>   |    6.750|
+Adder_carryin  |Adder_sum<2>   |    8.406|
+Adder_carryin  |Adder_sum<3>   |    9.097|
+Adder_carryin  |Adder_sum<4>   |    9.600|
+Adder_carryin  |Adder_sum<5>   |   10.519|
+Adder_carryin  |Adder_sum<6>   |   11.038|
+Adder_carryin  |Adder_sum<7>   |   11.514|
+Adder_in1<0>   |Adder_carryout |   11.422|
+Adder_in1<0>   |Adder_sum<0>   |    5.870|
+Adder_in1<0>   |Adder_sum<1>   |    6.347|
+Adder_in1<0>   |Adder_sum<2>   |    8.003|
+Adder_in1<0>   |Adder_sum<3>   |    8.694|
+Adder_in1<0>   |Adder_sum<4>   |    9.197|
+Adder_in1<0>   |Adder_sum<5>   |   10.116|
+Adder_in1<0>   |Adder_sum<6>   |   10.635|
+Adder_in1<0>   |Adder_sum<7>   |   11.111|
+Adder_in1<1>   |Adder_carryout |   11.600|
+Adder_in1<1>   |Adder_sum<1>   |    6.421|
+Adder_in1<1>   |Adder_sum<2>   |    8.181|
+Adder_in1<1>   |Adder_sum<3>   |    8.872|
+Adder_in1<1>   |Adder_sum<4>   |    9.375|
+Adder_in1<1>   |Adder_sum<5>   |   10.294|
+Adder_in1<1>   |Adder_sum<6>   |   10.813|
+Adder_in1<1>   |Adder_sum<7>   |   11.289|
+Adder_in1<2>   |Adder_carryout |    9.842|
+Adder_in1<2>   |Adder_sum<2>   |    6.242|
+Adder_in1<2>   |Adder_sum<3>   |    7.114|
+Adder_in1<2>   |Adder_sum<4>   |    7.617|
+Adder_in1<2>   |Adder_sum<5>   |    8.536|
+Adder_in1<2>   |Adder_sum<6>   |    9.055|
+Adder_in1<2>   |Adder_sum<7>   |    9.531|
+Adder_in1<3>   |Adder_carryout |    9.143|
+Adder_in1<3>   |Adder_sum<3>   |    6.426|
+Adder_in1<3>   |Adder_sum<4>   |    6.918|
+Adder_in1<3>   |Adder_sum<5>   |    7.837|
+Adder_in1<3>   |Adder_sum<6>   |    8.356|
+Adder_in1<3>   |Adder_sum<7>   |    8.832|
+Adder_in1<4>   |Adder_carryout |    8.258|
+Adder_in1<4>   |Adder_sum<4>   |    5.938|
+Adder_in1<4>   |Adder_sum<5>   |    6.952|
+Adder_in1<4>   |Adder_sum<6>   |    7.471|
+Adder_in1<4>   |Adder_sum<7>   |    7.947|
+Adder_in1<5>   |Adder_carryout |    7.740|
+Adder_in1<5>   |Adder_sum<5>   |    6.508|
+Adder_in1<5>   |Adder_sum<6>   |    6.953|
+Adder_in1<5>   |Adder_sum<7>   |    7.429|
+Adder_in1<6>   |Adder_carryout |    6.705|
+Adder_in1<6>   |Adder_sum<6>   |    6.519|
+Adder_in1<6>   |Adder_sum<7>   |    6.394|
+Adder_in1<7>   |Adder_carryout |    5.900|
+Adder_in1<7>   |Adder_sum<7>   |    5.622|
+Adder_in2<0>   |Adder_carryout |   11.345|
+Adder_in2<0>   |Adder_sum<0>   |    5.793|
+Adder_in2<0>   |Adder_sum<1>   |    6.270|
+Adder_in2<0>   |Adder_sum<2>   |    7.926|
+Adder_in2<0>   |Adder_sum<3>   |    8.617|
+Adder_in2<0>   |Adder_sum<4>   |    9.120|
+Adder_in2<0>   |Adder_sum<5>   |   10.039|
+Adder_in2<0>   |Adder_sum<6>   |   10.558|
+Adder_in2<0>   |Adder_sum<7>   |   11.034|
+Adder_in2<1>   |Adder_carryout |   10.863|
+Adder_in2<1>   |Adder_sum<1>   |    5.623|
+Adder_in2<1>   |Adder_sum<2>   |    7.444|
+Adder_in2<1>   |Adder_sum<3>   |    8.135|
+Adder_in2<1>   |Adder_sum<4>   |    8.638|
+Adder_in2<1>   |Adder_sum<5>   |    9.557|
+Adder_in2<1>   |Adder_sum<6>   |   10.076|
+Adder_in2<1>   |Adder_sum<7>   |   10.552|
+Adder_in2<2>   |Adder_carryout |    9.449|
+Adder_in2<2>   |Adder_sum<2>   |    5.992|
+Adder_in2<2>   |Adder_sum<3>   |    6.721|
+Adder_in2<2>   |Adder_sum<4>   |    7.224|
+Adder_in2<2>   |Adder_sum<5>   |    8.143|
+Adder_in2<2>   |Adder_sum<6>   |    8.662|
+Adder_in2<2>   |Adder_sum<7>   |    9.138|
+Adder_in2<3>   |Adder_carryout |    8.900|
+Adder_in2<3>   |Adder_sum<3>   |    6.035|
+Adder_in2<3>   |Adder_sum<4>   |    6.675|
+Adder_in2<3>   |Adder_sum<5>   |    7.594|
+Adder_in2<3>   |Adder_sum<6>   |    8.113|
+Adder_in2<3>   |Adder_sum<7>   |    8.589|
+Adder_in2<4>   |Adder_carryout |    8.394|
+Adder_in2<4>   |Adder_sum<4>   |    6.036|
+Adder_in2<4>   |Adder_sum<5>   |    7.088|
+Adder_in2<4>   |Adder_sum<6>   |    7.607|
+Adder_in2<4>   |Adder_sum<7>   |    8.083|
+Adder_in2<5>   |Adder_carryout |    7.263|
+Adder_in2<5>   |Adder_sum<5>   |    5.991|
+Adder_in2<5>   |Adder_sum<6>   |    6.476|
+Adder_in2<5>   |Adder_sum<7>   |    6.952|
+Adder_in2<6>   |Adder_carryout |    6.372|
+Adder_in2<6>   |Adder_sum<6>   |    5.463|
+Adder_in2<6>   |Adder_sum<7>   |    6.061|
+Adder_in2<7>   |Adder_carryout |    5.752|
+Adder_in2<7>   |Adder_sum<7>   |    5.418|
+---------------+---------------+---------+
+
+
+Analysis completed Sun Oct 26 06:22:53 2014 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 176 MB
+
+
+

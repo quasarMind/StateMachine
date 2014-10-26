@@ -1,0 +1,172 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 5
+-n 3 -fastpaths -xml ALU_T.twx ALU_T.ncd -o ALU_T.twr ALU_T.pcf
+
+Design file:              ALU_T.ncd
+Physical constraint file: ALU_T.pcf
+Device,package,speed:     xc3s500e,fg320,-5 (PRODUCTION 1.27 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+Adder_CarryIn  |Adder_CarryOut |   12.602|
+Adder_CarryIn  |OutPut<0>      |    5.876|
+Adder_CarryIn  |OutPut<1>      |    7.872|
+Adder_CarryIn  |OutPut<2>      |    7.867|
+Adder_CarryIn  |OutPut<3>      |    9.137|
+Adder_CarryIn  |OutPut<4>      |    9.860|
+Adder_CarryIn  |OutPut<5>      |   11.040|
+Adder_CarryIn  |OutPut<6>      |   11.824|
+Adder_CarryIn  |OutPut<7>      |   12.627|
+Input1<0>      |Adder_CarryOut |   12.738|
+Input1<0>      |OutPut<0>      |    5.809|
+Input1<0>      |OutPut<1>      |    8.008|
+Input1<0>      |OutPut<2>      |    8.003|
+Input1<0>      |OutPut<3>      |    9.273|
+Input1<0>      |OutPut<4>      |    9.996|
+Input1<0>      |OutPut<5>      |   11.176|
+Input1<0>      |OutPut<6>      |   11.960|
+Input1<0>      |OutPut<7>      |   12.763|
+Input1<1>      |Adder_CarryOut |   11.615|
+Input1<1>      |OutPut<1>      |    6.744|
+Input1<1>      |OutPut<2>      |    6.880|
+Input1<1>      |OutPut<3>      |    8.150|
+Input1<1>      |OutPut<4>      |    8.873|
+Input1<1>      |OutPut<5>      |   10.053|
+Input1<1>      |OutPut<6>      |   10.837|
+Input1<1>      |OutPut<7>      |   11.640|
+Input1<2>      |Adder_CarryOut |   10.622|
+Input1<2>      |OutPut<2>      |    5.887|
+Input1<2>      |OutPut<3>      |    7.157|
+Input1<2>      |OutPut<4>      |    7.880|
+Input1<2>      |OutPut<5>      |    9.060|
+Input1<2>      |OutPut<6>      |    9.844|
+Input1<2>      |OutPut<7>      |   10.647|
+Input1<3>      |Adder_CarryOut |    9.690|
+Input1<3>      |OutPut<3>      |    6.080|
+Input1<3>      |OutPut<4>      |    6.948|
+Input1<3>      |OutPut<5>      |    8.128|
+Input1<3>      |OutPut<6>      |    8.912|
+Input1<3>      |OutPut<7>      |    9.715|
+Input1<4>      |Adder_CarryOut |    8.933|
+Input1<4>      |OutPut<4>      |    6.383|
+Input1<4>      |OutPut<5>      |    7.371|
+Input1<4>      |OutPut<6>      |    8.155|
+Input1<4>      |OutPut<7>      |    8.958|
+Input1<5>      |Adder_CarryOut |    8.260|
+Input1<5>      |OutPut<5>      |    6.550|
+Input1<5>      |OutPut<6>      |    7.482|
+Input1<5>      |OutPut<7>      |    8.285|
+Input1<6>      |Adder_CarryOut |    7.280|
+Input1<6>      |OutPut<6>      |    6.796|
+Input1<6>      |OutPut<7>      |    7.305|
+Input1<7>      |Adder_CarryOut |    6.606|
+Input1<7>      |OutPut<7>      |    6.274|
+Input2<0>      |Adder_CarryOut |   12.467|
+Input2<0>      |OutPut<0>      |    6.260|
+Input2<0>      |OutPut<1>      |    7.737|
+Input2<0>      |OutPut<2>      |    7.732|
+Input2<0>      |OutPut<3>      |    9.002|
+Input2<0>      |OutPut<4>      |    9.725|
+Input2<0>      |OutPut<5>      |   10.905|
+Input2<0>      |OutPut<6>      |   11.689|
+Input2<0>      |OutPut<7>      |   12.492|
+Input2<1>      |Adder_CarryOut |   11.883|
+Input2<1>      |OutPut<1>      |    6.975|
+Input2<1>      |OutPut<2>      |    7.148|
+Input2<1>      |OutPut<3>      |    8.418|
+Input2<1>      |OutPut<4>      |    9.141|
+Input2<1>      |OutPut<5>      |   10.321|
+Input2<1>      |OutPut<6>      |   11.105|
+Input2<1>      |OutPut<7>      |   11.908|
+Input2<2>      |Adder_CarryOut |   10.440|
+Input2<2>      |OutPut<2>      |    5.726|
+Input2<2>      |OutPut<3>      |    6.975|
+Input2<2>      |OutPut<4>      |    7.698|
+Input2<2>      |OutPut<5>      |    8.878|
+Input2<2>      |OutPut<6>      |    9.662|
+Input2<2>      |OutPut<7>      |   10.465|
+Input2<3>      |Adder_CarryOut |    9.751|
+Input2<3>      |OutPut<3>      |    6.297|
+Input2<3>      |OutPut<4>      |    7.009|
+Input2<3>      |OutPut<5>      |    8.189|
+Input2<3>      |OutPut<6>      |    8.973|
+Input2<3>      |OutPut<7>      |    9.776|
+Input2<4>      |Adder_CarryOut |    8.427|
+Input2<4>      |OutPut<4>      |    6.187|
+Input2<4>      |OutPut<5>      |    6.865|
+Input2<4>      |OutPut<6>      |    7.649|
+Input2<4>      |OutPut<7>      |    8.452|
+Input2<5>      |Adder_CarryOut |    7.481|
+Input2<5>      |OutPut<5>      |    6.083|
+Input2<5>      |OutPut<6>      |    6.703|
+Input2<5>      |OutPut<7>      |    7.506|
+Input2<6>      |Adder_CarryOut |    6.621|
+Input2<6>      |OutPut<6>      |    6.155|
+Input2<6>      |OutPut<7>      |    6.646|
+Input2<7>      |Adder_CarryOut |    5.836|
+Input2<7>      |OutPut<7>      |    6.337|
+MUX_Select<0>  |OutPut<0>      |    6.599|
+MUX_Select<0>  |OutPut<1>      |    7.230|
+MUX_Select<0>  |OutPut<2>      |    6.639|
+MUX_Select<0>  |OutPut<3>      |    6.950|
+MUX_Select<0>  |OutPut<4>      |    7.021|
+MUX_Select<0>  |OutPut<5>      |    7.106|
+MUX_Select<0>  |OutPut<6>      |    7.210|
+MUX_Select<0>  |OutPut<7>      |    7.163|
+MUX_Select<1>  |OutPut<0>      |    6.224|
+MUX_Select<1>  |OutPut<1>      |    6.883|
+MUX_Select<1>  |OutPut<2>      |    6.354|
+MUX_Select<1>  |OutPut<3>      |    6.846|
+MUX_Select<1>  |OutPut<4>      |    6.661|
+MUX_Select<1>  |OutPut<5>      |    6.628|
+MUX_Select<1>  |OutPut<6>      |    6.848|
+MUX_Select<1>  |OutPut<7>      |    7.345|
+---------------+---------------+---------+
+
+
+Analysis completed Sun Oct 26 06:28:04 2014 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 176 MB
+
+
+

@@ -1,0 +1,7 @@
+xst -intstyle ise -ifn "D:/ASSGN3_Final/SCHEMATIC2_ITER/OutPort2X8bit.xst" -ofn "D:/ASSGN3_Final/SCHEMATIC2_ITER/OutPort2X8bit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-5 OutPort2X8bit.ngc OutPort2X8bit.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o OutPort2X8bit_map.ncd OutPort2X8bit.ngd OutPort2X8bit.pcf 
+par -w -intstyle ise -ol high -t 1 OutPort2X8bit_map.ncd OutPort2X8bit.ncd OutPort2X8bit.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml OutPort2X8bit.twx OutPort2X8bit.ncd -o OutPort2X8bit.twr OutPort2X8bit.pcf 
+vhdtdtfi -lib work OutPort2X8bit.vhd -prj SCHEMATIC2_ITER -o OutPort2X8bit.spl -module OutPort2X8bit -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e OutPort2X8bit.spl D:/ASSGN3_Final/SCHEMATIC2_ITER/OutPort2X8bit.sym 

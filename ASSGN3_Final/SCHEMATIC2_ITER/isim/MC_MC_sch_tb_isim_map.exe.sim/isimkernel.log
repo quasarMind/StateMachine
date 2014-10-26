@@ -1,0 +1,31 @@
+Command line:
+   MC_MC_sch_tb_isim_map.exe
+     -simmode  gui
+     -sdfmax  /UUT/=netgen/map/MC_map.sdf
+     -sdfroot  /UUT
+     -simrunnum  0
+     -socket  65021
+
+Sun Oct 26 19:07:28 2014
+
+
+ Elaboration Time: 0.15625 sec
+
+ Current Memory Usage: 1016.72 Meg
+
+ Total Signals          : 398
+ Total Nets             : 270
+ Total Signal Drivers   : 183
+ Total Blocks           : 162
+ Total Primitive Blocks : 85
+ Total Processes        : 179
+ Total Traceable Variables  : 640
+ Total Scalar Nets and Variables : 6476
+Total Line Count : 1118
+
+ Total Simulation Time: 0.171875 sec
+
+ Current Memory Usage: 1016.72 Meg
+
+Sun Oct 26 19:07:57 2014
+

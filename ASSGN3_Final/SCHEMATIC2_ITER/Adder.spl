@@ -1,0 +1,8 @@
+[Inputs]
+Adder_carryin
+=Adder_in1[7:0]=
+=Adder_in2[7:0]=
+[Outputs]
+Adder_carryout
+=Adder_sum[7:0]=
+[BiDir]

@@ -1,0 +1,2 @@
+vhdl isim_temp "netgen/map/MC_map.vhd"
+vhdl isim_temp "MC_TEST.vhd"

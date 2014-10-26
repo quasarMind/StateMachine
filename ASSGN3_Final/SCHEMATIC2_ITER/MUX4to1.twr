@@ -1,0 +1,107 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 5
+-n 3 -fastpaths -xml MUX4to1.twx MUX4to1.ncd -o MUX4to1.twr MUX4to1.pcf
+
+Design file:              MUX4to1.ncd
+Physical constraint file: MUX4to1.pcf
+Device,package,speed:     xc3s500e,fg320,-5 (PRODUCTION 1.27 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+MUX_PIN1<0>    |MUX_OUT<0>     |    6.123|
+MUX_PIN1<1>    |MUX_OUT<1>     |    6.697|
+MUX_PIN1<2>    |MUX_OUT<2>     |    6.327|
+MUX_PIN1<3>    |MUX_OUT<3>     |    6.116|
+MUX_PIN1<4>    |MUX_OUT<4>     |    6.471|
+MUX_PIN1<5>    |MUX_OUT<5>     |    5.691|
+MUX_PIN1<6>    |MUX_OUT<6>     |    6.513|
+MUX_PIN1<7>    |MUX_OUT<7>     |    5.552|
+MUX_PIN2<0>    |MUX_OUT<0>     |    6.101|
+MUX_PIN2<1>    |MUX_OUT<1>     |    6.529|
+MUX_PIN2<2>    |MUX_OUT<2>     |    6.731|
+MUX_PIN2<3>    |MUX_OUT<3>     |    6.520|
+MUX_PIN2<4>    |MUX_OUT<4>     |    7.306|
+MUX_PIN2<5>    |MUX_OUT<5>     |    6.660|
+MUX_PIN2<6>    |MUX_OUT<6>     |    6.967|
+MUX_PIN2<7>    |MUX_OUT<7>     |    6.723|
+MUX_PIN3<0>    |MUX_OUT<0>     |    6.256|
+MUX_PIN3<1>    |MUX_OUT<1>     |    6.205|
+MUX_PIN3<2>    |MUX_OUT<2>     |    6.425|
+MUX_PIN3<3>    |MUX_OUT<3>     |    6.556|
+MUX_PIN3<4>    |MUX_OUT<4>     |    6.922|
+MUX_PIN3<5>    |MUX_OUT<5>     |    6.421|
+MUX_PIN3<6>    |MUX_OUT<6>     |    6.749|
+MUX_PIN3<7>    |MUX_OUT<7>     |    6.086|
+MUX_PIN4<0>    |MUX_OUT<0>     |    6.299|
+MUX_PIN4<1>    |MUX_OUT<1>     |    6.476|
+MUX_PIN4<2>    |MUX_OUT<2>     |    6.022|
+MUX_PIN4<3>    |MUX_OUT<3>     |    6.025|
+MUX_PIN4<4>    |MUX_OUT<4>     |    7.074|
+MUX_PIN4<5>    |MUX_OUT<5>     |    6.160|
+MUX_PIN4<6>    |MUX_OUT<6>     |    6.755|
+MUX_PIN4<7>    |MUX_OUT<7>     |    6.177|
+MUX_SEL<0>     |MUX_OUT<0>     |    7.141|
+MUX_SEL<0>     |MUX_OUT<1>     |    6.969|
+MUX_SEL<0>     |MUX_OUT<2>     |    8.003|
+MUX_SEL<0>     |MUX_OUT<3>     |    8.216|
+MUX_SEL<0>     |MUX_OUT<4>     |    8.721|
+MUX_SEL<0>     |MUX_OUT<5>     |    8.748|
+MUX_SEL<0>     |MUX_OUT<6>     |    9.255|
+MUX_SEL<0>     |MUX_OUT<7>     |    8.232|
+MUX_SEL<1>     |MUX_OUT<0>     |    7.079|
+MUX_SEL<1>     |MUX_OUT<1>     |    7.220|
+MUX_SEL<1>     |MUX_OUT<2>     |    6.298|
+MUX_SEL<1>     |MUX_OUT<3>     |    6.494|
+MUX_SEL<1>     |MUX_OUT<4>     |    6.503|
+MUX_SEL<1>     |MUX_OUT<5>     |    6.420|
+MUX_SEL<1>     |MUX_OUT<6>     |    6.922|
+MUX_SEL<1>     |MUX_OUT<7>     |    6.271|
+---------------+---------------+---------+
+
+
+Analysis completed Sun Oct 26 06:15:52 2014 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 176 MB
+
+
+

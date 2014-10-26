@@ -1,0 +1,11 @@
+[Inputs]
+ENABLE_A_OUT
+ENABLE_B_OUT
+RESET_OUTPORT
+CLK
+=A_IN[7:0]=
+=B_IN[7:0]=
+[Outputs]
+=A_OUT[7:0]=
+=B_OUT[7:0]=
+[BiDir]
