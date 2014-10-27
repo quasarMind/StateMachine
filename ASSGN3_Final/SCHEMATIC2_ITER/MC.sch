@@ -24,21 +24,24 @@
         <signal name="XLXN_28(7:0)" />
         <signal name="OutPort_A_Out(7:0)" />
         <signal name="OutPort_B_Out(7:0)" />
-        <signal name="XLXN_87" />
-        <signal name="XLXN_89" />
+        <signal name="Dbg_En_A_PORT_A" />
+        <signal name="Dbg_En_A_PORT_B" />
         <signal name="XLXN_94" />
         <signal name="XLXN_95(1:0)" />
-        <signal name="XLXN_96(1:0)" />
-        <signal name="XLXN_97(1:0)" />
-        <signal name="XLXN_98(1:0)" />
+        <signal name="XLXN_96(1:0)">
+        </signal>
+        <signal name="XLXN_97(1:0)">
+        </signal>
         <signal name="Programme_Start" />
-        <signal name="XLXN_102(7:0)" />
+        <signal name="Dbg_ROM_DATA(7:0)" />
         <signal name="XLXN_104" />
         <signal name="XLXN_105(1:0)" />
         <signal name="ReRun" />
         <signal name="A_InPort(7:0)" />
         <signal name="B_InPort(7:0)" />
         <signal name="XLXN_117(5:0)" />
+        <signal name="XLXN_119(1:0)">
+        </signal>
         <port polarity="Input" name="ALU_T_CarryIn" />
         <port polarity="Output" name="ALU_TCarryOut" />
         <port polarity="Output" name="ALU_T_OutPut(7:0)" />
@@ -46,7 +49,10 @@
         <port polarity="Input" name="FF_PRESET" />
         <port polarity="Output" name="OutPort_A_Out(7:0)" />
         <port polarity="Output" name="OutPort_B_Out(7:0)" />
+        <port polarity="Output" name="Dbg_En_A_PORT_A" />
+        <port polarity="Output" name="Dbg_En_A_PORT_B" />
         <port polarity="Input" name="Programme_Start" />
+        <port polarity="Output" name="Dbg_ROM_DATA(7:0)" />
         <port polarity="Input" name="ReRun" />
         <port polarity="Input" name="A_InPort(7:0)" />
         <port polarity="Input" name="B_InPort(7:0)" />
@@ -152,7 +158,7 @@
             <line x2="496" y1="-160" y2="-160" x1="432" />
         </blockdef>
         <blockdef name="STATE_MACHINE">
-            <timestamp>2014-10-26T17:8:25</timestamp>
+            <timestamp>2014-10-27T9:8:25</timestamp>
             <line x2="576" y1="288" y2="288" x1="512" />
             <rect width="64" x="512" y="20" height="24" />
             <line x2="576" y1="32" y2="32" x1="512" />
@@ -178,7 +184,7 @@
             <rect width="448" x="64" y="-832" height="1152" />
         </blockdef>
         <block symbolname="ALU_T" name="XLXI_1">
-            <blockpin signalname="XLXN_98(1:0)" name="MUX_Select(1:0)" />
+            <blockpin signalname="XLXN_119(1:0)" name="MUX_Select(1:0)" />
             <blockpin signalname="ALU_T_CarryIn" name="Adder_CarryIn" />
             <blockpin signalname="XLXN_3(7:0)" name="Input1(7:0)" />
             <blockpin signalname="XLXN_4(7:0)" name="Input2(7:0)" />
@@ -238,8 +244,8 @@
             <blockpin signalname="XLXN_24(7:0)" name="MUX_OUT4(7:0)" />
         </block>
         <block symbolname="InputPort2X8bit" name="XLXI_9">
-            <blockpin signalname="XLXN_87" name="ENABLE_PORT_A" />
-            <blockpin signalname="XLXN_89" name="ENABLE_PORT_B" />
+            <blockpin signalname="Dbg_En_A_PORT_A" name="ENABLE_PORT_A" />
+            <blockpin signalname="Dbg_En_A_PORT_B" name="ENABLE_PORT_B" />
             <blockpin signalname="CLK" name="CLK" />
             <blockpin signalname="XLXN_94" name="RESET" />
             <blockpin signalname="A_InPort(7:0)" name="A_PORT(7:0)" />
@@ -249,8 +255,8 @@
             <blockpin signalname="XLXN_28(7:0)" name="C_BUS_OUT(7:0)" />
         </block>
         <block symbolname="OutPort2X8bit" name="XLXI_10">
-            <blockpin signalname="XLXN_87" name="ENABLE_A_OUT" />
-            <blockpin signalname="XLXN_89" name="ENABLE_B_OUT" />
+            <blockpin signalname="Dbg_En_A_PORT_A" name="ENABLE_A_OUT" />
+            <blockpin signalname="Dbg_En_A_PORT_B" name="ENABLE_B_OUT" />
             <blockpin signalname="XLXN_94" name="RESET_OUTPORT" />
             <blockpin signalname="CLK" name="CLK" />
             <blockpin signalname="A_InPort(7:0)" name="A_IN(7:0)" />
@@ -262,24 +268,24 @@
             <blockpin signalname="CLK" name="CLK" />
             <blockpin signalname="XLXN_104" name="ENABLE_ROM" />
             <blockpin signalname="XLXN_117(5:0)" name="ROM_ADDR(5:0)" />
-            <blockpin signalname="XLXN_102(7:0)" name="ROM_DATA(7:0)" />
+            <blockpin signalname="Dbg_ROM_DATA(7:0)" name="ROM_DATA(7:0)" />
         </block>
         <block symbolname="STATE_MACHINE" name="XLXI_33">
             <blockpin signalname="CLK" name="CLK" />
             <blockpin signalname="ReRun" name="Re_Run_Programme" />
             <blockpin signalname="Programme_Start" name="Programme_Start" />
-            <blockpin signalname="XLXN_102(7:0)" name="Data_From_ROM(7:0)" />
+            <blockpin signalname="Dbg_ROM_DATA(7:0)" name="Data_From_ROM(7:0)" />
+            <blockpin name="Programme_Status" />
             <blockpin signalname="XLXN_104" name="EN_OUT" />
-            <blockpin signalname="XLXN_87" name="EN_A_Ports" />
-            <blockpin signalname="XLXN_89" name="EN_B_Ports" />
+            <blockpin signalname="Dbg_En_A_PORT_A" name="EN_A_Ports" />
+            <blockpin signalname="Dbg_En_A_PORT_B" name="EN_B_Ports" />
             <blockpin signalname="XLXN_94" name="Reset" />
             <blockpin signalname="XLXN_117(5:0)" name="ADDR_To_ROM(5:0)" />
             <blockpin signalname="XLXN_95(1:0)" name="MUX_FF_Select(1:0)" />
             <blockpin signalname="XLXN_96(1:0)" name="MUX1_Select(1:0)" />
             <blockpin signalname="XLXN_97(1:0)" name="MUX2_Select(1:0)" />
-            <blockpin signalname="XLXN_98(1:0)" name="ALU_Select(1:0)" />
+            <blockpin signalname="XLXN_119(1:0)" name="ALU_Select(1:0)" />
             <blockpin signalname="XLXN_105(1:0)" name="BUS_Select(1:0)" />
-            <blockpin name="Programme_Status" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="5440" height="3520">
@@ -422,19 +428,23 @@
         <iomarker fontsize="28" x="3072" y="2224" name="OutPort_B_Out(7:0)" orien="R0" />
         <instance x="816" y="3312" name="XLXI_33" orien="R0">
         </instance>
-        <branch name="XLXN_87">
+        <branch name="Dbg_En_A_PORT_A">
             <wire x2="2336" y1="2832" y2="2832" x1="1392" />
             <wire x2="2336" y1="1920" y2="1920" x1="2256" />
             <wire x2="2336" y1="1920" y2="2832" x1="2336" />
-            <wire x2="2576" y1="1904" y2="1904" x1="2336" />
             <wire x2="2336" y1="1904" y2="1920" x1="2336" />
+            <wire x2="2496" y1="1904" y2="1904" x1="2336" />
+            <wire x2="2576" y1="1904" y2="1904" x1="2496" />
+            <wire x2="2496" y1="1616" y2="1904" x1="2496" />
         </branch>
-        <branch name="XLXN_89">
+        <branch name="Dbg_En_A_PORT_B">
             <wire x2="2320" y1="2896" y2="2896" x1="1392" />
             <wire x2="2320" y1="1984" y2="1984" x1="2256" />
             <wire x2="2320" y1="1984" y2="2896" x1="2320" />
-            <wire x2="2576" y1="1968" y2="1968" x1="2320" />
             <wire x2="2320" y1="1968" y2="1984" x1="2320" />
+            <wire x2="2544" y1="1968" y2="1968" x1="2320" />
+            <wire x2="2576" y1="1968" y2="1968" x1="2544" />
+            <wire x2="2544" y1="1616" y2="1968" x1="2544" />
         </branch>
         <branch name="XLXN_94">
             <wire x2="1008" y1="480" y2="480" x1="704" />
@@ -459,35 +469,17 @@
             <wire x2="1552" y1="2112" y2="2112" x1="1488" />
             <wire x2="1552" y1="2112" y2="3344" x1="1552" />
         </branch>
-        <branch name="XLXN_96(1:0)">
-            <wire x2="1680" y1="3088" y2="3088" x1="1392" />
-            <wire x2="1680" y1="736" y2="3088" x1="1680" />
-            <wire x2="1968" y1="736" y2="736" x1="1680" />
-        </branch>
-        <branch name="XLXN_97(1:0)">
-            <wire x2="1568" y1="3152" y2="3152" x1="1392" />
-            <wire x2="1568" y1="1840" y2="3152" x1="1568" />
-            <wire x2="1744" y1="1840" y2="1840" x1="1568" />
-            <wire x2="1744" y1="1152" y2="1840" x1="1744" />
-            <wire x2="1968" y1="1152" y2="1152" x1="1744" />
-        </branch>
-        <branch name="XLXN_98(1:0)">
-            <wire x2="1744" y1="3216" y2="3216" x1="1392" />
-            <wire x2="1744" y1="3056" y2="3216" x1="1744" />
-            <wire x2="4064" y1="3056" y2="3056" x1="1744" />
-            <wire x2="2976" y1="176" y2="352" x1="2976" />
-            <wire x2="3024" y1="352" y2="352" x1="2976" />
-            <wire x2="4064" y1="176" y2="176" x1="2976" />
-            <wire x2="4064" y1="176" y2="3056" x1="4064" />
-        </branch>
         <branch name="Programme_Start">
             <wire x2="816" y1="3024" y2="3024" x1="784" />
         </branch>
         <iomarker fontsize="28" x="784" y="3024" name="Programme_Start" orien="R180" />
         <instance x="208" y="3440" name="XLXI_31" orien="R0">
         </instance>
-        <branch name="XLXN_102(7:0)">
-            <wire x2="816" y1="3280" y2="3280" x1="704" />
+        <branch name="Dbg_ROM_DATA(7:0)">
+            <wire x2="768" y1="3104" y2="3104" x1="608" />
+            <wire x2="768" y1="3104" y2="3280" x1="768" />
+            <wire x2="816" y1="3280" y2="3280" x1="768" />
+            <wire x2="768" y1="3280" y2="3280" x1="704" />
         </branch>
         <branch name="XLXN_104">
             <wire x2="1488" y1="2256" y2="2256" x1="96" />
@@ -528,5 +520,32 @@
             <wire x2="1488" y1="3024" y2="3024" x1="1392" />
             <wire x2="1488" y1="3024" y2="3472" x1="1488" />
         </branch>
+        <iomarker fontsize="28" x="2544" y="1616" name="Dbg_En_A_PORT_B" orien="R270" />
+        <iomarker fontsize="28" x="2496" y="1616" name="Dbg_En_A_PORT_A" orien="R270" />
+        <branch name="XLXN_96(1:0)">
+            <wire x2="1680" y1="3088" y2="3088" x1="1392" />
+            <wire x2="1968" y1="736" y2="736" x1="1680" />
+            <wire x2="1680" y1="736" y2="3088" x1="1680" />
+        </branch>
+        <branch name="XLXN_97(1:0)">
+            <wire x2="1568" y1="3152" y2="3152" x1="1392" />
+            <wire x2="1744" y1="1840" y2="1840" x1="1568" />
+            <wire x2="1568" y1="1840" y2="3152" x1="1568" />
+            <wire x2="1968" y1="1152" y2="1152" x1="1744" />
+            <wire x2="1744" y1="1152" y2="1840" x1="1744" />
+        </branch>
+        <branch name="XLXN_119(1:0)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1568" y="3216" type="branch" />
+            <wire x2="1568" y1="3216" y2="3216" x1="1392" />
+            <wire x2="1744" y1="3216" y2="3216" x1="1568" />
+            <wire x2="1744" y1="3056" y2="3216" x1="1744" />
+            <wire x2="1904" y1="3056" y2="3056" x1="1744" />
+            <wire x2="4064" y1="3056" y2="3056" x1="1904" />
+            <wire x2="2976" y1="176" y2="352" x1="2976" />
+            <wire x2="3024" y1="352" y2="352" x1="2976" />
+            <wire x2="4064" y1="176" y2="176" x1="2976" />
+            <wire x2="4064" y1="176" y2="3056" x1="4064" />
+        </branch>
+        <iomarker fontsize="28" x="608" y="3104" name="Dbg_ROM_DATA(7:0)" orien="R180" />
     </sheet>
 </drawing>

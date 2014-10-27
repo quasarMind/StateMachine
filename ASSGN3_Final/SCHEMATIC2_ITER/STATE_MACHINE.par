@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-SAM-PC::  Sun Oct 26 19:25:18 2014
+SAM-PC::  Mon Oct 27 11:13:40 2014
 
 par -w -intstyle ise -ol high -t 1 STATE_MACHINE_map.ncd STATE_MACHINE.ncd
 STATE_MACHINE.pcf 
@@ -25,21 +25,21 @@ Device speed data version:  "PRODUCTION 1.27 2013-10-13".
 
 Design Summary Report:
 
- Number of External IOBs                          16 out of 232     6%
+ Number of External IOBs                          21 out of 232     9%
 
-   Number of External Input IOBs                  2
+   Number of External Input IOBs                  3
 
-      Number of External Input IBUFs              2
+      Number of External Input IBUFs              3
 
-   Number of External Output IOBs                14
+   Number of External Output IOBs                18
 
-      Number of External Output IOBs             14
+      Number of External Output IOBs             18
 
    Number of External Bidir IOBs                  0
 
 
    Number of BUFGMUXs                        1 out of 24      4%
-   Number of Slices                          3 out of 4656    1%
+   Number of Slices                         16 out of 4656    1%
       Number of SLICEMs                      0 out of 2328    0%
 
 
@@ -58,43 +58,43 @@ Total REAL time at the beginning of Placer: 1 secs
 Total CPU  time at the beginning of Placer: 1 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:c3) REAL time: 1 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:2c4) REAL time: 1 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:c3) REAL time: 1 secs 
+Phase 2.7  Design Feasibility Check (Checksum:2c4) REAL time: 1 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:c3) REAL time: 1 secs 
+Phase 3.31  Local Placement Optimization (Checksum:2c4) REAL time: 1 secs 
 
 Phase 4.2  Initial Clock and IO Placement
-................
-Phase 4.2  Initial Clock and IO Placement (Checksum:16cae7b8) REAL time: 1 secs 
+.............
+Phase 4.2  Initial Clock and IO Placement (Checksum:208bfb28) REAL time: 1 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:16cae7b8) REAL time: 1 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:208bfb28) REAL time: 1 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:16cae7b8) REAL time: 1 secs 
+Phase 6.36  Local Placement Optimization (Checksum:208bfb28) REAL time: 1 secs 
 
 Phase 7.3  Local Placement Optimization
-...............
-Phase 7.3  Local Placement Optimization (Checksum:1724a574) REAL time: 1 secs 
+............
+Phase 7.3  Local Placement Optimization (Checksum:2123d580) REAL time: 2 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:1724a574) REAL time: 1 secs 
+Phase 8.5  Local Placement Optimization (Checksum:2123d580) REAL time: 2 secs 
 
 Phase 9.8  Global Placement
-..
-Phase 9.8  Global Placement (Checksum:1aa73bea) REAL time: 3 secs 
+......
+Phase 9.8  Global Placement (Checksum:3da9d0a7) REAL time: 3 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:1aa73bea) REAL time: 3 secs 
+Phase 10.5  Local Placement Optimization (Checksum:3da9d0a7) REAL time: 3 secs 
 
 Phase 11.18  Placement Optimization
-Phase 11.18  Placement Optimization (Checksum:1bb44e30) REAL time: 3 secs 
+Phase 11.18  Placement Optimization (Checksum:3054e66a) REAL time: 3 secs 
 
 Phase 12.5  Local Placement Optimization
-Phase 12.5  Local Placement Optimization (Checksum:1bb44e30) REAL time: 3 secs 
+Phase 12.5  Local Placement Optimization (Checksum:3054e66a) REAL time: 3 secs 
 
 Total REAL time to Placer completion: 3 secs 
 Total CPU  time to Placer completion: 3 secs 
@@ -105,34 +105,30 @@ Writing design to file STATE_MACHINE.ncd
 Starting Router
 
 
-Phase  1  : 27 unrouted;      REAL time: 6 secs 
+Phase  1  : 111 unrouted;      REAL time: 6 secs 
 
-Phase  2  : 24 unrouted;      REAL time: 6 secs 
+Phase  2  : 95 unrouted;      REAL time: 6 secs 
 
-Phase  3  : 1 unrouted;      REAL time: 6 secs 
+Phase  3  : 5 unrouted;      REAL time: 6 secs 
 
-Phase  4  : 1 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
+Phase  4  : 8 unrouted; (Par is working to improve performance)     REAL time: 7 secs 
 
-Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 7 secs 
 
 Updating file: STATE_MACHINE.ncd with current fully routed design.
 
-Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 7 secs 
 
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 7 secs 
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 8 secs 
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 7 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 8 secs 
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 7 secs 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 8 secs 
 
-Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 7 secs 
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 8 secs 
 
-Phase 11  : 0 unrouted; (Par is working to improve performance)     REAL time: 7 secs 
-
-Phase 12  : 0 unrouted; (Par is working to improve performance)     REAL time: 7 secs 
-
-Total REAL time to Router completion: 7 secs 
-Total CPU time to Router completion: 6 secs 
+Total REAL time to Router completion: 8 secs 
+Total CPU time to Router completion: 7 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -150,9 +146,7 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|           CLK_BUFGP | BUFGMUX_X2Y10| No   |    2 |  0.000     |  0.143      |
-+---------------------+--------------+------+------+------------+-------------+
-|       EN_OUT_or0000 |         Local|      |    1 |  0.000     |  0.559      |
+|           CLK_BUFGP | BUFGMUX_X2Y10| No   |   15 |  0.009     |  0.170      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -172,9 +166,8 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net CLK | SETUP       |         N/A|     1.313ns|     N/A|           0
-  _BUFGP                                    | HOLD        |     0.842ns|            |       0|           0
-                                            | MINLOWPULSE |         N/A|     1.438ns|     N/A|           0
+  Autotimespec constraint for clock net CLK | SETUP       |         N/A|     5.284ns|     N/A|           0
+  _BUFGP                                    | HOLD        |     1.047ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -190,8 +183,8 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 7 secs 
-Total CPU time to PAR completion: 7 secs 
+Total REAL time to PAR completion: 8 secs 
+Total CPU time to PAR completion: 8 secs 
 
 Peak Memory Usage:  329 MB
 

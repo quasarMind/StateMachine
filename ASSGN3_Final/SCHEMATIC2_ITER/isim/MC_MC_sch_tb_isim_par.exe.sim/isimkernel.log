@@ -4,9 +4,28 @@ Command line:
      -sdfmax  /UUT/=netgen/par/MC_timesim.sdf
      -sdfroot  /UUT
      -simrunnum  0
-     -socket  61906
+     -socket  63565
 
-Sun Oct 26 08:52:14 2014
+Mon Oct 27 10:45:35 2014
 
 
  Elaboration Time: 0.109375 sec
+
+ Current Memory Usage: 1016.71 Meg
+
+ Total Signals          : 398
+ Total Nets             : 270
+ Total Signal Drivers   : 184
+ Total Blocks           : 162
+ Total Primitive Blocks : 85
+ Total Processes        : 179
+ Total Traceable Variables  : 640
+ Total Scalar Nets and Variables : 6252
+Total Line Count : 1120
+
+ Total Simulation Time: 0.109375 sec
+
+ Current Memory Usage: 387.502 Meg
+
+Mon Oct 27 10:52:20 2014
+

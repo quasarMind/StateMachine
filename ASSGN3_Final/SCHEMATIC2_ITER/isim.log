@@ -1,14 +1,16 @@
 ISim log file
-Running: D:\ASSGN3_Final\SCHEMATIC2_ITER\MC_MC_sch_tb_isim_map.exe -intstyle ise -gui -sdfmax /UUT/=netgen/map/MC_map.sdf -sdfroot /UUT -tclbatch isim.cmd -wdb D:/ASSGN3_Final/SCHEMATIC2_ITER/MC_MC_sch_tb_isim_map.wdb 
+Running: D:\ASSGN3_Final\SCHEMATIC2_ITER\MC_MC_sch_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb D:/ASSGN3_Final/SCHEMATIC2_ITER/MC_MC_sch_tb_isim_beh.wdb 
 ISim P.20131013 (signature 0x7708f090)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
 WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
 This is a Lite version of ISim.
-INFO: SDF backannotation was successful with SDF file netgen/map/MC_map.sdf, for root module /UUT/.
 Time resolution is 1 ps
 # onerror resume
 # wave add /
 # run 1000 ns
 Simulator is doing circuit initialization process.
+at 0 ps, Instance /mc_mc_sch_tb/UUT/XLXI_31/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 0 ps, Instance /mc_mc_sch_tb/UUT/XLXI_31/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
 Finished circuit initialization process.
+at 90 ns(2), Instance /mc_mc_sch_tb/UUT/XLXI_31/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.

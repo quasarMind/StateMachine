@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : MC.vhf
--- /___/   /\     Timestamp : 10/26/2014 19:06:59
+-- /___/   /\     Timestamp : 10/27/2014 11:01:33
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -107,34 +107,37 @@ entity MC is
           ReRun           : in    std_logic; 
           ALU_TCarryOut   : out   std_logic; 
           ALU_T_OutPut    : out   std_logic_vector (7 downto 0); 
+          Dbg_En_A_PORT_A : out   std_logic; 
+          Dbg_En_A_PORT_B : out   std_logic; 
+          Dbg_ROM_DATA    : out   std_logic_vector (7 downto 0); 
           OutPort_A_Out   : out   std_logic_vector (7 downto 0); 
           OutPort_B_Out   : out   std_logic_vector (7 downto 0));
 end MC;
 
 architecture BEHAVIORAL of MC is
-   signal XLXN_3             : std_logic_vector (7 downto 0);
-   signal XLXN_4             : std_logic_vector (7 downto 0);
-   signal XLXN_7             : std_logic_vector (7 downto 0);
-   signal XLXN_8             : std_logic_vector (7 downto 0);
-   signal XLXN_9             : std_logic_vector (7 downto 0);
-   signal XLXN_10            : std_logic_vector (7 downto 0);
-   signal XLXN_21            : std_logic_vector (7 downto 0);
-   signal XLXN_22            : std_logic_vector (7 downto 0);
-   signal XLXN_23            : std_logic_vector (7 downto 0);
-   signal XLXN_24            : std_logic_vector (7 downto 0);
-   signal XLXN_28            : std_logic_vector (7 downto 0);
-   signal XLXN_87            : std_logic;
-   signal XLXN_89            : std_logic;
-   signal XLXN_94            : std_logic;
-   signal XLXN_95            : std_logic_vector (1 downto 0);
-   signal XLXN_96            : std_logic_vector (1 downto 0);
-   signal XLXN_97            : std_logic_vector (1 downto 0);
-   signal XLXN_98            : std_logic_vector (1 downto 0);
-   signal XLXN_102           : std_logic_vector (7 downto 0);
-   signal XLXN_104           : std_logic;
-   signal XLXN_105           : std_logic_vector (1 downto 0);
-   signal XLXN_117           : std_logic_vector (5 downto 0);
-   signal ALU_T_OutPut_DUMMY : std_logic_vector (7 downto 0);
+   signal XLXN_3                : std_logic_vector (7 downto 0);
+   signal XLXN_4                : std_logic_vector (7 downto 0);
+   signal XLXN_7                : std_logic_vector (7 downto 0);
+   signal XLXN_8                : std_logic_vector (7 downto 0);
+   signal XLXN_9                : std_logic_vector (7 downto 0);
+   signal XLXN_10               : std_logic_vector (7 downto 0);
+   signal XLXN_21               : std_logic_vector (7 downto 0);
+   signal XLXN_22               : std_logic_vector (7 downto 0);
+   signal XLXN_23               : std_logic_vector (7 downto 0);
+   signal XLXN_24               : std_logic_vector (7 downto 0);
+   signal XLXN_28               : std_logic_vector (7 downto 0);
+   signal XLXN_94               : std_logic;
+   signal XLXN_95               : std_logic_vector (1 downto 0);
+   signal XLXN_96               : std_logic_vector (1 downto 0);
+   signal XLXN_97               : std_logic_vector (1 downto 0);
+   signal XLXN_104              : std_logic;
+   signal XLXN_105              : std_logic_vector (1 downto 0);
+   signal XLXN_117              : std_logic_vector (5 downto 0);
+   signal XLXN_119              : std_logic_vector (1 downto 0);
+   signal Dbg_En_A_PORT_A_DUMMY : std_logic;
+   signal Dbg_En_A_PORT_B_DUMMY : std_logic;
+   signal ALU_T_OutPut_DUMMY    : std_logic_vector (7 downto 0);
+   signal Dbg_ROM_DATA_DUMMY    : std_logic_vector (7 downto 0);
    component ALU_T_MUSER_MC
       port ( MUX_Select     : in    std_logic_vector (1 downto 0); 
              Adder_CarryIn  : in    std_logic; 
@@ -205,6 +208,7 @@ architecture BEHAVIORAL of MC is
              Re_Run_Programme : in    std_logic; 
              Programme_Start  : in    std_logic; 
              Data_From_ROM    : in    std_logic_vector (7 downto 0); 
+             Programme_Status : out   std_logic; 
              EN_OUT           : out   std_logic; 
              EN_A_Ports       : out   std_logic; 
              EN_B_Ports       : out   std_logic; 
@@ -214,17 +218,19 @@ architecture BEHAVIORAL of MC is
              MUX1_Select      : out   std_logic_vector (1 downto 0); 
              MUX2_Select      : out   std_logic_vector (1 downto 0); 
              ALU_Select       : out   std_logic_vector (1 downto 0); 
-             BUS_Select       : out   std_logic_vector (1 downto 0); 
-             Programme_Status : out   std_logic);
+             BUS_Select       : out   std_logic_vector (1 downto 0));
    end component;
    
 begin
    ALU_T_OutPut(7 downto 0) <= ALU_T_OutPut_DUMMY(7 downto 0);
+   Dbg_En_A_PORT_A <= Dbg_En_A_PORT_A_DUMMY;
+   Dbg_En_A_PORT_B <= Dbg_En_A_PORT_B_DUMMY;
+   Dbg_ROM_DATA(7 downto 0) <= Dbg_ROM_DATA_DUMMY(7 downto 0);
    XLXI_1 : ALU_T_MUSER_MC
       port map (Adder_CarryIn=>ALU_T_CarryIn,
                 Input1(7 downto 0)=>XLXN_3(7 downto 0),
                 Input2(7 downto 0)=>XLXN_4(7 downto 0),
-                MUX_Select(1 downto 0)=>XLXN_98(1 downto 0),
+                MUX_Select(1 downto 0)=>XLXN_119(1 downto 0),
                 Adder_CarryOut=>ALU_TCarryOut,
                 OutPut(7 downto 0)=>ALU_T_OutPut_DUMMY(7 downto 0));
    
@@ -285,8 +291,8 @@ begin
                 B_PORT(7 downto 0)=>B_InPort(7 downto 0),
                 CLK=>CLK,
                 C_BUS_IN(7 downto 0)=>ALU_T_OutPut_DUMMY(7 downto 0),
-                ENABLE_PORT_A=>XLXN_87,
-                ENABLE_PORT_B=>XLXN_89,
+                ENABLE_PORT_A=>Dbg_En_A_PORT_A_DUMMY,
+                ENABLE_PORT_B=>Dbg_En_A_PORT_B_DUMMY,
                 OUTPUT_SELECT(1 downto 0)=>XLXN_105(1 downto 0),
                 RESET=>XLXN_94,
                 C_BUS_OUT(7 downto 0)=>XLXN_28(7 downto 0));
@@ -295,8 +301,8 @@ begin
       port map (A_IN(7 downto 0)=>A_InPort(7 downto 0),
                 B_IN(7 downto 0)=>B_InPort(7 downto 0),
                 CLK=>CLK,
-                ENABLE_A_OUT=>XLXN_87,
-                ENABLE_B_OUT=>XLXN_89,
+                ENABLE_A_OUT=>Dbg_En_A_PORT_A_DUMMY,
+                ENABLE_B_OUT=>Dbg_En_A_PORT_B_DUMMY,
                 RESET_OUTPORT=>XLXN_94,
                 A_OUT(7 downto 0)=>OutPort_A_Out(7 downto 0),
                 B_OUT(7 downto 0)=>OutPort_B_Out(7 downto 0));
@@ -305,18 +311,18 @@ begin
       port map (CLK=>CLK,
                 ENABLE_ROM=>XLXN_104,
                 ROM_ADDR(5 downto 0)=>XLXN_117(5 downto 0),
-                ROM_DATA(7 downto 0)=>XLXN_102(7 downto 0));
+                ROM_DATA(7 downto 0)=>Dbg_ROM_DATA_DUMMY(7 downto 0));
    
    XLXI_33 : STATE_MACHINE
       port map (CLK=>CLK,
-                Data_From_ROM(7 downto 0)=>XLXN_102(7 downto 0),
+                Data_From_ROM(7 downto 0)=>Dbg_ROM_DATA_DUMMY(7 downto 0),
                 Programme_Start=>Programme_Start,
                 Re_Run_Programme=>ReRun,
                 ADDR_To_ROM(5 downto 0)=>XLXN_117(5 downto 0),
-                ALU_Select(1 downto 0)=>XLXN_98(1 downto 0),
+                ALU_Select(1 downto 0)=>XLXN_119(1 downto 0),
                 BUS_Select(1 downto 0)=>XLXN_105(1 downto 0),
-                EN_A_Ports=>XLXN_87,
-                EN_B_Ports=>XLXN_89,
+                EN_A_Ports=>Dbg_En_A_PORT_A_DUMMY,
+                EN_B_Ports=>Dbg_En_A_PORT_B_DUMMY,
                 EN_OUT=>XLXN_104,
                 MUX_FF_Select(1 downto 0)=>XLXN_95(1 downto 0),
                 MUX1_Select(1 downto 0)=>XLXN_96(1 downto 0),

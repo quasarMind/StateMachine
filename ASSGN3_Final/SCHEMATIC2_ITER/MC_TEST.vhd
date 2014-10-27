@@ -1,4 +1,4 @@
--- Vhdl test bench created from schematic D:\ASSGN3_Final\SCHEMATIC2_ITER\MC.sch - Sun Oct 26 19:05:47 2014
+-- Vhdl test bench created from schematic D:\ASSGN3_Final\SCHEMATIC2_ITER\MC.sch - Mon Oct 27 11:15:02 2014
 --
 -- Notes: 
 -- 1) This testbench template has been automatically generated using types
@@ -29,7 +29,10 @@ ARCHITECTURE behavioral OF MC_MC_sch_tb IS
           FF_PRESET	:	IN	STD_LOGIC; 
           OutPort_A_Out	:	OUT	STD_LOGIC_VECTOR (7 DOWNTO 0); 
           OutPort_B_Out	:	OUT	STD_LOGIC_VECTOR (7 DOWNTO 0); 
+          Dbg_En_A_PORT_A	:	OUT	STD_LOGIC; 
+          Dbg_En_A_PORT_B	:	OUT	STD_LOGIC; 
           Programme_Start	:	IN	STD_LOGIC; 
+          Dbg_ROM_DATA	:	OUT	STD_LOGIC_VECTOR (7 DOWNTO 0); 
           ReRun	:	IN	STD_LOGIC; 
           A_InPort	:	IN	STD_LOGIC_VECTOR (7 DOWNTO 0); 
           B_InPort	:	IN	STD_LOGIC_VECTOR (7 DOWNTO 0));
@@ -42,14 +45,15 @@ ARCHITECTURE behavioral OF MC_MC_sch_tb IS
    SIGNAL FF_PRESET	:	STD_LOGIC;
    SIGNAL OutPort_A_Out	:	STD_LOGIC_VECTOR (7 DOWNTO 0);
    SIGNAL OutPort_B_Out	:	STD_LOGIC_VECTOR (7 DOWNTO 0);
+   SIGNAL Dbg_En_A_PORT_A	:	STD_LOGIC;
+   SIGNAL Dbg_En_A_PORT_B	:	STD_LOGIC;
    SIGNAL Programme_Start	:	STD_LOGIC;
+   SIGNAL Dbg_ROM_DATA	:	STD_LOGIC_VECTOR (7 DOWNTO 0);
    SIGNAL ReRun	:	STD_LOGIC;
    SIGNAL A_InPort	:	STD_LOGIC_VECTOR (7 DOWNTO 0);
    SIGNAL B_InPort	:	STD_LOGIC_VECTOR (7 DOWNTO 0);
-
- -- Clock period definitions
+-- Clock period definitions
    constant CLK_period : time := 10 ns;
-	
 BEGIN
 
    UUT: MC PORT MAP(
@@ -60,13 +64,15 @@ BEGIN
 		FF_PRESET => FF_PRESET, 
 		OutPort_A_Out => OutPort_A_Out, 
 		OutPort_B_Out => OutPort_B_Out, 
+		Dbg_En_A_PORT_A => Dbg_En_A_PORT_A, 
+		Dbg_En_A_PORT_B => Dbg_En_A_PORT_B, 
 		Programme_Start => Programme_Start, 
+		Dbg_ROM_DATA => Dbg_ROM_DATA, 
 		ReRun => ReRun, 
 		A_InPort => A_InPort, 
 		B_InPort => B_InPort
-   );	
-	
-	-- Clock process definitions
+   );
+-- Clock process definitions
    CLK_process :process
    begin
 		CLK <= '0';
@@ -74,23 +80,17 @@ BEGIN
 		CLK <= '1';
 		wait for CLK_period/2;
    end process;
-
 -- *** Test Bench - User Defined Section ***
    tb : PROCESS
    BEGIN
-	
-	
-	
-FF_PRESET <= '0';
+	FF_PRESET <= '0';
 	ALU_T_CarryIn <= '0';
 	A_InPort <= "00000001";
 	B_InPort <= "00000010";
 	ReRun <= '0';
 	
-	--wait for 100ns;
-	--Programme_Start <= '1';	
-	
-	
+	wait for 50 ns;
+	Programme_Start <= '1';
 	
 	
       WAIT; -- will wait forever

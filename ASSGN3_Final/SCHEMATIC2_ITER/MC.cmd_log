@@ -33,3 +33,44 @@ xst -intstyle ise -ifn "D:/ASSGN3_Final/SCHEMATIC2_ITER/MC.xst" -ofn "D:/ASSGN3_
 ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-5 MC.ngc MC.ngd  
 map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o MC_map.ncd MC.ngd MC.pcf 
 netgen -intstyle ise -s 5  -pcf MC.pcf -rpw 100 -tpw 0 -ar Structure -tm MC -w -dir netgen/map -ofmt vhdl -sim MC_map.ncd MC_map.vhd 
+xst -intstyle ise -ifn "D:/ASSGN3_Final/SCHEMATIC2_ITER/MC.xst" -ofn "D:/ASSGN3_Final/SCHEMATIC2_ITER/MC.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-5 MC.ngc MC.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o MC_map.ncd MC.ngd MC.pcf 
+par -w -intstyle ise -ol high -t 1 MC_map.ncd MC.ncd MC.pcf 
+xst -intstyle ise -ifn "D:/ASSGN3_Final/SCHEMATIC2_ITER/MC.xst" -ofn "D:/ASSGN3_Final/SCHEMATIC2_ITER/MC.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-5 MC.ngc MC.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o MC_map.ncd MC.ngd MC.pcf 
+par -w -intstyle ise -ol high -t 1 MC_map.ncd MC.ncd MC.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml MC.twx MC.ncd -o MC.twr MC.pcf 
+netgen -intstyle ise -s 5  -pcf MC.pcf -rpw 100 -tpw 0 -ar Structure -tm MC -insert_pp_buffers true -w -dir netgen/par -ofmt vhdl -sim MC.ncd MC_timesim.vhd 
+xst -intstyle ise -ifn "D:/ASSGN3_Final/SCHEMATIC2_ITER/MC.xst" -ofn "D:/ASSGN3_Final/SCHEMATIC2_ITER/MC.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-5 MC.ngc MC.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o MC_map.ncd MC.ngd MC.pcf 
+par -w -intstyle ise -ol high -t 1 MC_map.ncd MC.ncd MC.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml MC.twx MC.ncd -o MC.twr MC.pcf 
+xst -intstyle ise -ifn "D:/ASSGN3_Final/SCHEMATIC2_ITER/MC.xst" -ofn "D:/ASSGN3_Final/SCHEMATIC2_ITER/MC.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-5 MC.ngc MC.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o MC_map.ncd MC.ngd MC.pcf 
+par -w -intstyle ise -ol high -t 1 MC_map.ncd MC.ncd MC.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml MC.twx MC.ncd -o MC.twr MC.pcf 
+netgen -intstyle ise -s 5  -pcf MC.pcf -rpw 100 -tpw 0 -ar Structure -tm MC -insert_pp_buffers true -w -dir netgen/par -ofmt vhdl -sim MC.ncd MC_timesim.vhd 
+xst -intstyle ise -ifn "D:/ASSGN3_Final/SCHEMATIC2_ITER/MC.xst" -ofn "D:/ASSGN3_Final/SCHEMATIC2_ITER/MC.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-5 MC.ngc MC.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o MC_map.ncd MC.ngd MC.pcf 
+par -w -intstyle ise -ol high -t 1 MC_map.ncd MC.ncd MC.pcf 
+xst -intstyle ise -ifn "D:/ASSGN3_Final/SCHEMATIC2_ITER/MC.xst" -ofn "D:/ASSGN3_Final/SCHEMATIC2_ITER/MC.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-5 MC.ngc MC.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o MC_map.ncd MC.ngd MC.pcf 
+par -w -intstyle ise -ol high -t 1 MC_map.ncd MC.ncd MC.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml MC.twx MC.ncd -o MC.twr MC.pcf 
+netgen -intstyle ise -s 5  -pcf MC.pcf -rpw 100 -tpw 0 -ar Structure -tm MC -insert_pp_buffers true -w -dir netgen/par -ofmt vhdl -sim MC.ncd MC_timesim.vhd 
+xst -intstyle ise -ifn "D:/ASSGN3_Final/SCHEMATIC2_ITER/MC.xst" -ofn "D:/ASSGN3_Final/SCHEMATIC2_ITER/MC.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-5 MC.ngc MC.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o MC_map.ncd MC.ngd MC.pcf 
+par -w -intstyle ise -ol high -t 1 MC_map.ncd MC.ncd MC.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml MC.twx MC.ncd -o MC.twr MC.pcf 
+xst -intstyle ise -ifn "D:/ASSGN3_Final/SCHEMATIC2_ITER/MC.xst" -ofn "D:/ASSGN3_Final/SCHEMATIC2_ITER/MC.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-5 MC.ngc MC.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o MC_map.ncd MC.ngd MC.pcf 
+par -w -intstyle ise -ol high -t 1 MC_map.ncd MC.ncd MC.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml MC.twx MC.ncd -o MC.twr MC.pcf 
