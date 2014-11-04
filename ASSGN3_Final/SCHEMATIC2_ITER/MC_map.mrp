@@ -9,25 +9,25 @@ Target Device  : xc3s500e
 Target Package : fg320
 Target Speed   : -5
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Mon Oct 27 11:14:27 2014
+Mapped Date    : Wed Oct 29 17:51:52 2014
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:   17
 Logic Utilization:
-  Number of Slice Flip Flops:            23 out of   9,312    1%
-  Number of 4 input LUTs:                17 out of   9,312    1%
+  Number of Slice Flip Flops:            24 out of   9,312    1%
+  Number of 4 input LUTs:                18 out of   9,312    1%
 Logic Distribution:
-  Number of occupied Slices:             16 out of   4,656    1%
-    Number of Slices containing only related logic:      16 out of      16 100%
-    Number of Slices containing unrelated logic:          0 out of      16   0%
+  Number of occupied Slices:             17 out of   4,656    1%
+    Number of Slices containing only related logic:      17 out of      17 100%
+    Number of Slices containing unrelated logic:          0 out of      17   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:          17 out of   9,312    1%
-  Number of bonded IOBs:                 39 out of     232   16%
+  Total Number of 4 input LUTs:          18 out of   9,312    1%
+  Number of bonded IOBs:                 55 out of     232   23%
   Number of BUFGMUXs:                     1 out of      24    4%
 
-Average Fanout of Non-Clock Nets:                2.77
+Average Fanout of Non-Clock Nets:                2.88
 
 Peak Memory Usage:  314 MB
 Total REAL time to MAP completion:  1 secs 
@@ -116,9 +116,9 @@ INFO:LIT:244 - All of the single ended outputs in this design are using slew
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-  65 block(s) removed
-  74 block(s) optimized away
- 101 signal(s) removed
+  50 block(s) removed
+  50 block(s) optimized away
+  52 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
@@ -196,245 +196,140 @@ The signal "FF_PRESET" is unused and has been removed.
  Unused block "FF_PRESET" (PAD) removed.
 The signal "FF_PRESET_IBUF" is unused and has been removed.
  Unused block "FF_PRESET_IBUF" (BUF) removed.
-The signal "N2" is unused and has been removed.
- Unused block "XLXI_33/BUS_Select_mux0000<0>1_SW0" (ROM) removed.
-The signal "XLXI_10/A_OUT<0>" is unused and has been removed.
- Unused block "XLXI_10/A_OUT_0" (FF) removed.
-The signal "XLXI_10/A_OUT<1>" is unused and has been removed.
-The signal "XLXI_10/A_OUT<2>" is unused and has been removed.
-The signal "XLXI_10/A_OUT<3>" is unused and has been removed.
-The signal "XLXI_10/A_OUT<4>" is unused and has been removed.
-The signal "XLXI_10/A_OUT<5>" is unused and has been removed.
-The signal "XLXI_10/A_OUT<6>" is unused and has been removed.
-The signal "XLXI_10/A_OUT<7>" is unused and has been removed.
- Unused block "XLXI_10/A_OUT_7" (FF) removed.
+The signal "XLXI_1/XLXI_3/Mxor_vsum_2_xor0000_xo<0>1" is unused and has been
+removed.
+The signal "XLXI_1/XLXI_3/Mxor_vsum_2_xor0000_xo<0>11" is unused and has been
+removed.
 The signal "XLXI_10/B_OUT<0>" is unused and has been removed.
  Unused block "XLXI_10/B_OUT_0" (FF) removed.
 The signal "XLXI_10/B_OUT<1>" is unused and has been removed.
+ Unused block "XLXI_10/B_OUT_1" (FF) removed.
 The signal "XLXI_10/B_OUT<2>" is unused and has been removed.
+ Unused block "XLXI_10/B_OUT_2" (FF) removed.
 The signal "XLXI_10/B_OUT<3>" is unused and has been removed.
+ Unused block "XLXI_10/B_OUT_3" (FF) removed.
 The signal "XLXI_10/B_OUT<4>" is unused and has been removed.
+ Unused block "XLXI_10/B_OUT_4" (FF) removed.
 The signal "XLXI_10/B_OUT<5>" is unused and has been removed.
+ Unused block "XLXI_10/B_OUT_5" (FF) removed.
 The signal "XLXI_10/B_OUT<6>" is unused and has been removed.
+ Unused block "XLXI_10/B_OUT_6" (FF) removed.
 The signal "XLXI_10/B_OUT<7>" is unused and has been removed.
  Unused block "XLXI_10/B_OUT_7" (FF) removed.
-The signal "XLXI_33/BUS_Select<0>" is unused and has been removed.
- Unused block "XLXI_33/BUS_Select_0" (FF) removed.
-  The signal "XLXI_33/BUS_Select_not0001" is unused and has been removed.
-   Unused block "XLXI_33/BUS_Select_not00011" (ROM) removed.
-  The signal "XLXI_33/BUS_Select_mux0000<1>" is unused and has been removed.
-   Unused block "XLXI_33/BUS_Select_mux0000<1>1" (ROM) removed.
-The signal "XLXI_33/BUS_Select<1>" is unused and has been removed.
- Unused block "XLXI_33/BUS_Select_1" (FF) removed.
-  The signal "XLXI_33/BUS_Select_mux0000<0>" is unused and has been removed.
-   Unused block "XLXI_33/BUS_Select_mux0000<0>2" (ROM) removed.
-    The signal "XLXI_33/N0" is unused and has been removed.
-     Unused block "XLXI_33/BUS_Select_mux0000<0>1" (ROM) removed.
-The signal "XLXI_4/FLIPFLOP_OUT<6>" is unused and has been removed.
- Unused block "XLXI_4/FLIPFLOP_OUT_6" (FF) removed.
-  The signal "XLXI_9/C_BUS_OUT<6>" is unused and has been removed.
-The signal "XLXI_9/A_PORT_REG<0>" is unused and has been removed.
- Unused block "XLXI_9/A_PORT_REG_0" (FF) removed.
-The signal "XLXI_9/A_PORT_REG<7>" is unused and has been removed.
- Unused block "XLXI_9/A_PORT_REG_7" (FF) removed.
 The signal "XLXI_9/B_PORT_REG<0>" is unused and has been removed.
  Unused block "XLXI_9/B_PORT_REG_0" (FF) removed.
 The signal "XLXI_9/B_PORT_REG<1>" is unused and has been removed.
+ Unused block "XLXI_9/B_PORT_REG_1" (FF) removed.
 The signal "XLXI_9/B_PORT_REG<2>" is unused and has been removed.
+ Unused block "XLXI_9/B_PORT_REG_2" (FF) removed.
 The signal "XLXI_9/B_PORT_REG<3>" is unused and has been removed.
+ Unused block "XLXI_9/B_PORT_REG_3" (FF) removed.
 The signal "XLXI_9/B_PORT_REG<4>" is unused and has been removed.
+ Unused block "XLXI_9/B_PORT_REG_4" (FF) removed.
 The signal "XLXI_9/B_PORT_REG<5>" is unused and has been removed.
+ Unused block "XLXI_9/B_PORT_REG_5" (FF) removed.
 The signal "XLXI_9/B_PORT_REG<6>" is unused and has been removed.
+ Unused block "XLXI_9/B_PORT_REG_6" (FF) removed.
 The signal "XLXI_9/B_PORT_REG<7>" is unused and has been removed.
  Unused block "XLXI_9/B_PORT_REG_7" (FF) removed.
-The signal "XLXI_9/C_BUS_OUT<0>" is unused and has been removed.
- Unused block "XLXI_9/C_BUS_OUT_0" (LATCH) removed.
-  The signal "XLXI_9/C_BUS_OUT_mux0000<0>" is unused and has been removed.
-   Unused block "XLXI_9/Mmux_C_BUS_OUT_mux00002_f5" (MUX) removed.
-    The signal "XLXI_9/Mmux_C_BUS_OUT_mux000021" is unused and has been removed.
-     Unused block "XLXI_9/Mmux_C_BUS_OUT_mux000022" (ROM) removed.
-    The signal "XLXI_9/Mmux_C_BUS_OUT_mux00002" is unused and has been removed.
-     Unused block "XLXI_9/Mmux_C_BUS_OUT_mux000021" (ROM) removed.
-  The signal "XLXI_9/C_BUS_OUT_cmp_eq0000" is unused and has been removed.
-   Unused block "XLXI_9/C_BUS_OUT_cmp_eq00001" (ROM) removed.
-The signal "XLXI_9/C_BUS_OUT<1>" is unused and has been removed.
-The signal "XLXI_9/C_BUS_OUT<2>" is unused and has been removed.
-The signal "XLXI_9/C_BUS_OUT<3>" is unused and has been removed.
-The signal "XLXI_9/C_BUS_OUT<4>" is unused and has been removed.
-The signal "XLXI_9/C_BUS_OUT<5>" is unused and has been removed.
-The signal "XLXI_9/C_BUS_OUT<7>" is unused and has been removed.
- Unused block "XLXI_9/C_BUS_OUT_7" (LATCH) removed.
-  The signal "XLXI_9/C_BUS_OUT_mux0000<7>" is unused and has been removed.
-   Unused block "XLXI_9/Mmux_C_BUS_OUT_mux000016_f5" (MUX) removed.
-    The signal "XLXI_9/Mmux_C_BUS_OUT_mux0000161" is unused and has been removed.
-     Unused block "XLXI_9/Mmux_C_BUS_OUT_mux0000162" (ROM) removed.
-    The signal "XLXI_9/Mmux_C_BUS_OUT_mux000016" is unused and has been removed.
-     Unused block "XLXI_9/Mmux_C_BUS_OUT_mux0000161" (ROM) removed.
-The signal "XLXI_9/C_BUS_OUT_mux0000<1>" is unused and has been removed.
-The signal "XLXI_9/C_BUS_OUT_mux0000<2>" is unused and has been removed.
-The signal "XLXI_9/C_BUS_OUT_mux0000<3>" is unused and has been removed.
-The signal "XLXI_9/C_BUS_OUT_mux0000<4>" is unused and has been removed.
-The signal "XLXI_9/C_BUS_OUT_mux0000<5>" is unused and has been removed.
-The signal "XLXI_9/C_BUS_OUT_mux0000<6>" is unused and has been removed.
-The signal "XLXI_9/Mmux_C_BUS_OUT_mux000010" is unused and has been removed.
- Unused block "XLXI_9/Mmux_C_BUS_OUT_mux0000101" (ROM) removed.
-The signal "XLXI_9/Mmux_C_BUS_OUT_mux0000101" is unused and has been removed.
-The signal "XLXI_9/Mmux_C_BUS_OUT_mux000012" is unused and has been removed.
- Unused block "XLXI_9/Mmux_C_BUS_OUT_mux0000121" (ROM) removed.
-The signal "XLXI_9/Mmux_C_BUS_OUT_mux0000121" is unused and has been removed.
-The signal "XLXI_9/Mmux_C_BUS_OUT_mux000014" is unused and has been removed.
- Unused block "XLXI_9/Mmux_C_BUS_OUT_mux0000141" (ROM) removed.
-The signal "XLXI_9/Mmux_C_BUS_OUT_mux0000141" is unused and has been removed.
-The signal "XLXI_9/Mmux_C_BUS_OUT_mux00004" is unused and has been removed.
- Unused block "XLXI_9/Mmux_C_BUS_OUT_mux000041" (ROM) removed.
-The signal "XLXI_9/Mmux_C_BUS_OUT_mux000041" is unused and has been removed.
-The signal "XLXI_9/Mmux_C_BUS_OUT_mux00006" is unused and has been removed.
- Unused block "XLXI_9/Mmux_C_BUS_OUT_mux000061" (ROM) removed.
-The signal "XLXI_9/Mmux_C_BUS_OUT_mux000061" is unused and has been removed.
-The signal "XLXI_9/Mmux_C_BUS_OUT_mux00008" is unused and has been removed.
- Unused block "XLXI_9/Mmux_C_BUS_OUT_mux000081" (ROM) removed.
-The signal "XLXI_9/Mmux_C_BUS_OUT_mux000081" is unused and has been removed.
 
 Optimized Block(s):
 TYPE 		BLOCK
-FDCE 		XLXI_10/A_OUT_0_1
+LUT4 		XLXI_1/XLXI_3/Adder_carryout1
+   optimized to 0
+LUT4 		XLXI_1/XLXI_3/Mxor__xor0000_xo<0>1
+   optimized to 0
+LUT4 		XLXI_1/XLXI_3/Mxor__xor0001_xo<0>1
+   optimized to 0
+LUT4 		XLXI_1/XLXI_3/Mxor__xor0002_xo<0>1
+   optimized to 0
+LUT4 		XLXI_1/XLXI_3/Mxor__xor0003_xo<0>1
+   optimized to 0
+LUT4 		XLXI_1/XLXI_3/Mxor__xor0004_xo<0>1
+   optimized to 0
+LUT4 		XLXI_1/XLXI_3/Mxor_vsum_2_xor0000_xo<0>11
+   optimized to 1
+LUT4 		XLXI_1/XLXI_3/Mxor_vsum_2_xor0000_xo<0>12
+   optimized to 0
+MUXF5 		XLXI_1/XLXI_3/Mxor_vsum_2_xor0000_xo<0>1_f5
+LUT4 		XLXI_1/XLXI_3/Mxor_vsum_5_xor0000_xo<0>1
+   optimized to 0
+LUT3 		XLXI_1/XLXI_3/carry_or00001
+   optimized to 0
+LUT3 		XLXI_1/XLXI_3/carry_or00011
+   optimized to 0
+LUT4 		XLXI_1/XLXI_3/vsum_2_or00031
+   optimized to 0
+LUT4 		XLXI_1/XLXI_3/vsum_5_or00011
+   optimized to 0
+LUT4 		XLXI_1/XLXI_3/vsum_5_or00031
+   optimized to 0
+FDCE 		XLXI_10/A_OUT_0
    optimized to 0
 FDCE 		XLXI_10/A_OUT_1
    optimized to 0
-FDCE 		XLXI_10/A_OUT_1_1
-   optimized to 0
 FDCE 		XLXI_10/A_OUT_2
-   optimized to 0
-FDCE 		XLXI_10/A_OUT_2_1
    optimized to 0
 FDCE 		XLXI_10/A_OUT_3
    optimized to 0
-FDCE 		XLXI_10/A_OUT_3_1
-   optimized to 0
 FDCE 		XLXI_10/A_OUT_4
-   optimized to 0
-FDCE 		XLXI_10/A_OUT_4_1
    optimized to 0
 FDCE 		XLXI_10/A_OUT_5
    optimized to 0
-FDCE 		XLXI_10/A_OUT_5_1
-   optimized to 0
 FDCE 		XLXI_10/A_OUT_6
    optimized to 0
-FDCE 		XLXI_10/A_OUT_6_1
-   optimized to 0
-FDCE 		XLXI_10/A_OUT_7_1
+FDCE 		XLXI_10/A_OUT_7
    optimized to 0
 FDCE 		XLXI_10/B_OUT_0_1
    optimized to 0
-FDCE 		XLXI_10/B_OUT_1
-   optimized to 0
 FDCE 		XLXI_10/B_OUT_1_1
-   optimized to 0
-FDCE 		XLXI_10/B_OUT_2
    optimized to 0
 FDCE 		XLXI_10/B_OUT_2_1
    optimized to 0
-FDCE 		XLXI_10/B_OUT_3
-   optimized to 0
 FDCE 		XLXI_10/B_OUT_3_1
-   optimized to 0
-FDCE 		XLXI_10/B_OUT_4
    optimized to 0
 FDCE 		XLXI_10/B_OUT_4_1
    optimized to 0
-FDCE 		XLXI_10/B_OUT_5
-   optimized to 0
 FDCE 		XLXI_10/B_OUT_5_1
-   optimized to 0
-FDCE 		XLXI_10/B_OUT_6
    optimized to 0
 FDCE 		XLXI_10/B_OUT_6_1
    optimized to 0
 FDCE 		XLXI_10/B_OUT_7_1
    optimized to 0
-FDCP 		XLXI_4/FLIPFLOP_OUT_0
-   optimized to 0
-FDCP 		XLXI_4/FLIPFLOP_OUT_0_1
-   optimized to 0
-FDCP 		XLXI_4/FLIPFLOP_OUT_1
-   optimized to 0
-FDCP 		XLXI_4/FLIPFLOP_OUT_1_1
-   optimized to 0
-FDCP 		XLXI_4/FLIPFLOP_OUT_2
-   optimized to 0
-FDCP 		XLXI_4/FLIPFLOP_OUT_2_1
-   optimized to 0
-FDCP 		XLXI_4/FLIPFLOP_OUT_3
-   optimized to 0
-FDCP 		XLXI_4/FLIPFLOP_OUT_3_1
-   optimized to 0
-FDCP 		XLXI_4/FLIPFLOP_OUT_4
-   optimized to 0
-FDCP 		XLXI_4/FLIPFLOP_OUT_4_1
-   optimized to 0
-FDCP 		XLXI_4/FLIPFLOP_OUT_5
-   optimized to 0
-FDCP 		XLXI_4/FLIPFLOP_OUT_5_1
-   optimized to 0
-FDCP 		XLXI_4/FLIPFLOP_OUT_6_1
-   optimized to 0
 FDCP 		XLXI_4/FLIPFLOP_OUT_7
    optimized to 0
-FDC 		XLXI_9/A_PORT_REG_1
+FDCP 		XLXI_4/FLIPFLOP_OUT_7_1
    optimized to 0
-FDC 		XLXI_9/A_PORT_REG_2
+FDCP 		XLXI_4/FLIPFLOP_OUT_7_2
    optimized to 0
-FDC 		XLXI_9/A_PORT_REG_3
+FDCP 		XLXI_4/FLIPFLOP_OUT_7_3
    optimized to 0
-FDC 		XLXI_9/A_PORT_REG_4
+FDCP 		XLXI_4/FLIPFLOP_OUT_7_4
    optimized to 0
-FDC 		XLXI_9/A_PORT_REG_5
+FDCP 		XLXI_4/FLIPFLOP_OUT_7_5
    optimized to 0
-FDC 		XLXI_9/A_PORT_REG_6
+FDCP 		XLXI_4/FLIPFLOP_OUT_7_6
    optimized to 0
-FDC 		XLXI_9/B_PORT_REG_1
+FDCP 		XLXI_4/FLIPFLOP_OUT_7_7
    optimized to 0
-FDC 		XLXI_9/B_PORT_REG_2
+FDCP 		XLXI_4/FLIPFLOP_OUT_7_8
    optimized to 0
-FDC 		XLXI_9/B_PORT_REG_3
+FDCP 		XLXI_5/FLIPFLOP_OUT_0
    optimized to 0
-FDC 		XLXI_9/B_PORT_REG_4
+FDCP 		XLXI_5/FLIPFLOP_OUT_1
    optimized to 0
-FDC 		XLXI_9/B_PORT_REG_5
+FDCP 		XLXI_5/FLIPFLOP_OUT_2
    optimized to 0
-FDC 		XLXI_9/B_PORT_REG_6
+FDCP 		XLXI_5/FLIPFLOP_OUT_3
    optimized to 0
-LD_1 		XLXI_9/C_BUS_OUT_1
+FDCP 		XLXI_5/FLIPFLOP_OUT_4
    optimized to 0
-LD_1 		XLXI_9/C_BUS_OUT_2
+FDCP 		XLXI_5/FLIPFLOP_OUT_5
    optimized to 0
-LD_1 		XLXI_9/C_BUS_OUT_3
+FDCP 		XLXI_5/FLIPFLOP_OUT_6
    optimized to 0
-LD_1 		XLXI_9/C_BUS_OUT_4
+FDCP 		XLXI_5/FLIPFLOP_OUT_7
    optimized to 0
-LD_1 		XLXI_9/C_BUS_OUT_5
-   optimized to 0
-LD_1 		XLXI_9/C_BUS_OUT_6
-   optimized to 0
-LUT4 		XLXI_9/Mmux_C_BUS_OUT_mux0000102
-   optimized to 0
-MUXF5 		XLXI_9/Mmux_C_BUS_OUT_mux000010_f5
-LUT4 		XLXI_9/Mmux_C_BUS_OUT_mux0000122
-   optimized to 0
-MUXF5 		XLXI_9/Mmux_C_BUS_OUT_mux000012_f5
-LUT4 		XLXI_9/Mmux_C_BUS_OUT_mux0000142
-   optimized to 0
-MUXF5 		XLXI_9/Mmux_C_BUS_OUT_mux000014_f5
-LUT4 		XLXI_9/Mmux_C_BUS_OUT_mux000042
-   optimized to 0
-MUXF5 		XLXI_9/Mmux_C_BUS_OUT_mux00004_f5
-LUT4 		XLXI_9/Mmux_C_BUS_OUT_mux000062
-   optimized to 0
-MUXF5 		XLXI_9/Mmux_C_BUS_OUT_mux00006_f5
-LUT4 		XLXI_9/Mmux_C_BUS_OUT_mux000082
-   optimized to 0
-MUXF5 		XLXI_9/Mmux_C_BUS_OUT_mux00008_f5
 GND 		XST_GND
 VCC 		XST_VCC
 
@@ -448,6 +343,22 @@ Section 6 - IOB Properties
 | IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
 |                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ALU_IN1<0>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| ALU_IN1<1>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| ALU_IN1<2>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| ALU_IN1<3>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| ALU_IN1<4>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| ALU_IN1<5>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| ALU_IN1<6>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| ALU_IN1<7>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| ALU_IN2<0>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| ALU_IN2<1>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| ALU_IN2<2>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| ALU_IN2<3>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| ALU_IN2<4>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| ALU_IN2<5>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| ALU_IN2<6>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| ALU_IN2<7>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
 | ALU_TCarryOut                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
 | ALU_T_CarryIn                      | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
 | ALU_T_OutPut<0>                    | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |

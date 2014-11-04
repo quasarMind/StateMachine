@@ -121,10 +121,13 @@ Architecture behavioral of Entity rommstein is up to date.
 Compiling vhdl file "D:/ASSGN3_Final/SCHEMATIC2_ITER/STATE_MACHINE.vhd" in Library work.
 Architecture behavioral of Entity state_machine is up to date.
 Compiling vhdl file "D:/ASSGN3_Final/SCHEMATIC2_ITER/MC.vhf" in Library work.
-Architecture behavioral of Entity alu_t_muser_mc is up to date.
-Architecture behavioral of Entity mc is up to date.
+Entity <alu_t_muser_mc> compiled.
+Entity <alu_t_muser_mc> (Architecture <behavioral>) compiled.
+Entity <mc> compiled.
+Entity <mc> (Architecture <behavioral>) compiled.
 Compiling vhdl file "D:/ASSGN3_Final/SCHEMATIC2_ITER/ALU_T.vhf" in Library work.
-Architecture behavioral of Entity alu_t is up to date.
+Entity <alu_t> compiled.
+Entity <alu_t> (Architecture <behavioral>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -156,7 +159,7 @@ Analyzing hierarchy for entity <Adder> in library <work> (architecture <behavior
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <MC> in library <work> (Architecture <behavioral>).
-WARNING:Xst:753 - "D:/ASSGN3_Final/SCHEMATIC2_ITER/MC.vhf" line 316: Unconnected output port 'Programme_Status' of component 'STATE_MACHINE'.
+WARNING:Xst:753 - "D:/ASSGN3_Final/SCHEMATIC2_ITER/MC.vhf" line 320: Unconnected output port 'Programme_Status' of component 'STATE_MACHINE'.
 Entity <MC> analyzed. Unit <MC> generated.
 
 Analyzing Entity <ALU_T_MUSER_MC> in library <work> (Architecture <behavioral>).
@@ -187,13 +190,15 @@ Analyzing Entity <ROMMSTEIN> in library <work> (Architecture <behavioral>).
 Entity <ROMMSTEIN> analyzed. Unit <ROMMSTEIN> generated.
 
 Analyzing Entity <STATE_MACHINE> in library <work> (Architecture <behavioral>).
-INFO:Xst:2679 - Register <FF_Path> in unit <STATE_MACHINE> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <FF_Path1> in unit <STATE_MACHINE> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <FF_Path2> in unit <STATE_MACHINE> has a constant value of 1 during circuit operation. The register is replaced by logic.
 INFO:Xst:2679 - Register <MUX_ALU_Path> in unit <STATE_MACHINE> has a constant value of 1 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <BUS_A_B_Ports_Path> in unit <STATE_MACHINE> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <BUS_A_B_Ports_Path1> in unit <STATE_MACHINE> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <BUS_A_B_Ports_Path2> in unit <STATE_MACHINE> has a constant value of 1 during circuit operation. The register is replaced by logic.
 INFO:Xst:2679 - Register <Reset_Path> in unit <STATE_MACHINE> has a constant value of 1 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <MUX_FF_Select> in unit <STATE_MACHINE> has a constant value of 00 during circuit operation. The register is replaced by logic.
 INFO:Xst:2679 - Register <MUX1_Select> in unit <STATE_MACHINE> has a constant value of 00 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <MUX2_Select> in unit <STATE_MACHINE> has a constant value of 00 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <MUX2_Select> in unit <STATE_MACHINE> has a constant value of 01 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <ALU_Select> in unit <STATE_MACHINE> has a constant value of 00 during circuit operation. The register is replaced by logic.
 INFO:Xst:2679 - Register <EN_A_Ports> in unit <STATE_MACHINE> has a constant value of 1 during circuit operation. The register is replaced by logic.
 INFO:Xst:2679 - Register <EN_B_Ports> in unit <STATE_MACHINE> has a constant value of 1 during circuit operation. The register is replaced by logic.
 INFO:Xst:2679 - Register <Reset> in unit <STATE_MACHINE> has a constant value of 1 during circuit operation. The register is replaced by logic.
@@ -268,7 +273,6 @@ Unit <ROMMSTEIN> synthesized.
 
 Synthesizing Unit <STATE_MACHINE>.
     Related source file is "D:/ASSGN3_Final/SCHEMATIC2_ITER/STATE_MACHINE.vhd".
-WARNING:Xst:1305 - Output <ALU_Select> is never assigned. Tied to value 00.
 WARNING:Xst:1305 - Output <Programme_Status> is never assigned. Tied to value 0.
 WARNING:Xst:646 - Signal <Reset_Path> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <Reset_Instruction> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
@@ -277,12 +281,14 @@ WARNING:Xst:646 - Signal <MUX_ALU_Instruction> is assigned but never used. This 
 WARNING:Xst:1780 - Signal <Instruction_Identifier> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <Instruction_Finder> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <Instruction> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <FF_Path> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <FF_Path1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <FF_Instruction> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <EN_OUT_reg> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <Call_Next_Instruction> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <BUS_A_B_Ports_Path1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <BUS_A_B_Ports_Instruction> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Using one-hot encoding for signal <State>.
+    Found 2-bit register for signal <MUX_FF_Select>.
     Found 1-bit register for signal <EN_OUT>.
     Found 2-bit register for signal <BUS_Select>.
     Found 6-bit register for signal <ADDR_To_ROM>.
@@ -291,7 +297,7 @@ WARNING:Xst:646 - Signal <BUS_A_B_Ports_Instruction> is assigned but never used.
     Found 4-bit register for signal <State>.
     Summary:
 	inferred   1 Counter(s).
-	inferred  17 D-type flip-flop(s).
+	inferred  19 D-type flip-flop(s).
 Unit <STATE_MACHINE> synthesized.
 
 
@@ -333,9 +339,9 @@ Macro Statistics
  64x8-bit ROM                                          : 1
 # Counters                                             : 1
  6-bit up counter                                      : 1
-# Registers                                            : 16
+# Registers                                            : 17
  1-bit register                                        : 1
- 2-bit register                                        : 1
+ 2-bit register                                        : 2
  4-bit register                                        : 2
  6-bit register                                        : 1
  8-bit register                                        : 11
@@ -353,6 +359,10 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+INFO:Xst:2261 - The FF/Latch <MUX_FF_Select_0> in Unit <XLXI_33> is equivalent to the following FF/Latch, which will be removed : <BUS_Select_1> 
+INFO:Xst:2261 - The FF/Latch <MUX_FF_Select_1> in Unit <XLXI_33> is equivalent to the following FF/Latch, which will be removed : <BUS_Select_0> 
+WARNING:Xst:1710 - FF/Latch <MUX_FF_Select_1> (without init value) has a constant value of 0 in block <XLXI_33>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <MUX_FF_Select_0> (without init value) has a constant value of 1 in block <XLXI_33>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <7>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <6>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <5>. This FF/Latch will be trimmed during the optimization process.
@@ -385,6 +395,15 @@ WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <4>.
 WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <5>.
 WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <6>.
 WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <7>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <0>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <1>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <2>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <3>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <4>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <5>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <6>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <7>.
+WARNING:Xst:2404 -  FFs/Latches <MUX_FF_Select<1:1>> (without init value) have a constant value of 0 in block <STATE_MACHINE>.
 
 Synthesizing (advanced) Unit <ROMMSTEIN>.
 INFO:Xst:3034 - In order to maximize performance and save block RAM resources, the small ROM <Mrom_RDATA> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
@@ -398,8 +417,8 @@ Macro Statistics
  64x8-bit ROM                                          : 1
 # Counters                                             : 1
  6-bit up counter                                      : 1
-# Registers                                            : 105
- Flip-Flops                                            : 105
+# Registers                                            : 106
+ Flip-Flops                                            : 106
 # Latches                                              : 5
  8-bit latch                                           : 5
 # Multiplexers                                         : 4
@@ -413,8 +432,10 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1710 - FF/Latch <ROM_DATA_0> (without init value) has a constant value of 0 in block <ROMMSTEIN>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ROM_DATA_1> (without init value) has a constant value of 0 in block <ROMMSTEIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <MUX_FF_Select> (without init value) has a constant value of 1 in block <STATE_MACHINE>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BUS_Select_0> (without init value) has a constant value of 0 in block <STATE_MACHINE>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BUS_Select_1> (without init value) has a constant value of 1 in block <STATE_MACHINE>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ROM_DATA_1> (without init value) has a constant value of 0 in block <ROMMSTEIN>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ROM_DATA_2> (without init value) has a constant value of 0 in block <ROMMSTEIN>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ROM_DATA_3> (without init value) has a constant value of 0 in block <ROMMSTEIN>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ROM_DATA_4> (without init value) has a constant value of 0 in block <ROMMSTEIN>. This FF/Latch will be trimmed during the optimization process.
@@ -425,6 +446,8 @@ Optimizing unit <MC> ...
 Optimizing unit <FLIPFLOP> ...
 
 Optimizing unit <OutPort2X8bit> ...
+
+Optimizing unit <ROMMSTEIN> ...
 
 Optimizing unit <STATE_MACHINE> ...
 
@@ -449,22 +472,46 @@ WARNING:Xst:1710 - FF/Latch <XLXI_8/MUX_OUT3_4> (without init value) has a const
 WARNING:Xst:1710 - FF/Latch <XLXI_8/MUX_OUT3_5> (without init value) has a constant value of 0 in block <MC>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <XLXI_8/MUX_OUT3_6> (without init value) has a constant value of 0 in block <MC>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <XLXI_8/MUX_OUT3_7> (without init value) has a constant value of 0 in block <MC>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <XLXI_8/MUX_OUT2_0> (without init value) has a constant value of 0 in block <MC>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <XLXI_8/MUX_OUT2_1> (without init value) has a constant value of 0 in block <MC>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <XLXI_8/MUX_OUT2_2> (without init value) has a constant value of 0 in block <MC>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <XLXI_8/MUX_OUT2_3> (without init value) has a constant value of 0 in block <MC>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <XLXI_8/MUX_OUT2_4> (without init value) has a constant value of 0 in block <MC>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <XLXI_8/MUX_OUT2_5> (without init value) has a constant value of 0 in block <MC>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <XLXI_8/MUX_OUT2_6> (without init value) has a constant value of 0 in block <MC>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <XLXI_8/MUX_OUT2_7> (without init value) has a constant value of 0 in block <MC>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1294 - Latch <XLXI_8/MUX_OUT1_7> is equivalent to a wire in block <MC>.
-WARNING:Xst:1294 - Latch <XLXI_8/MUX_OUT1_6> is equivalent to a wire in block <MC>.
-WARNING:Xst:1294 - Latch <XLXI_8/MUX_OUT1_5> is equivalent to a wire in block <MC>.
-WARNING:Xst:1294 - Latch <XLXI_8/MUX_OUT1_4> is equivalent to a wire in block <MC>.
-WARNING:Xst:1294 - Latch <XLXI_8/MUX_OUT1_3> is equivalent to a wire in block <MC>.
-WARNING:Xst:1294 - Latch <XLXI_8/MUX_OUT1_2> is equivalent to a wire in block <MC>.
-WARNING:Xst:1294 - Latch <XLXI_8/MUX_OUT1_1> is equivalent to a wire in block <MC>.
-WARNING:Xst:1294 - Latch <XLXI_8/MUX_OUT1_0> is equivalent to a wire in block <MC>.
+WARNING:Xst:1710 - FF/Latch <XLXI_8/MUX_OUT1_0> (without init value) has a constant value of 0 in block <MC>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <XLXI_8/MUX_OUT1_1> (without init value) has a constant value of 0 in block <MC>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <XLXI_8/MUX_OUT1_2> (without init value) has a constant value of 0 in block <MC>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <XLXI_8/MUX_OUT1_3> (without init value) has a constant value of 0 in block <MC>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <XLXI_8/MUX_OUT1_4> (without init value) has a constant value of 0 in block <MC>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <XLXI_8/MUX_OUT1_5> (without init value) has a constant value of 0 in block <MC>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <XLXI_8/MUX_OUT1_6> (without init value) has a constant value of 0 in block <MC>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <XLXI_8/MUX_OUT1_7> (without init value) has a constant value of 0 in block <MC>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1294 - Latch <XLXI_8/MUX_OUT2_7> is equivalent to a wire in block <MC>.
+WARNING:Xst:1294 - Latch <XLXI_8/MUX_OUT2_6> is equivalent to a wire in block <MC>.
+WARNING:Xst:1294 - Latch <XLXI_8/MUX_OUT2_5> is equivalent to a wire in block <MC>.
+WARNING:Xst:1294 - Latch <XLXI_8/MUX_OUT2_4> is equivalent to a wire in block <MC>.
+WARNING:Xst:1294 - Latch <XLXI_8/MUX_OUT2_3> is equivalent to a wire in block <MC>.
+WARNING:Xst:1294 - Latch <XLXI_8/MUX_OUT2_2> is equivalent to a wire in block <MC>.
+WARNING:Xst:1294 - Latch <XLXI_8/MUX_OUT2_1> is equivalent to a wire in block <MC>.
+WARNING:Xst:1294 - Latch <XLXI_8/MUX_OUT2_0> is equivalent to a wire in block <MC>.
+WARNING:Xst:1294 - Latch <XLXI_9/C_BUS_OUT_7> is equivalent to a wire in block <MC>.
+WARNING:Xst:1294 - Latch <XLXI_9/C_BUS_OUT_6> is equivalent to a wire in block <MC>.
+WARNING:Xst:1294 - Latch <XLXI_9/C_BUS_OUT_5> is equivalent to a wire in block <MC>.
+WARNING:Xst:1294 - Latch <XLXI_9/C_BUS_OUT_4> is equivalent to a wire in block <MC>.
+WARNING:Xst:1294 - Latch <XLXI_9/C_BUS_OUT_3> is equivalent to a wire in block <MC>.
+WARNING:Xst:1294 - Latch <XLXI_9/C_BUS_OUT_2> is equivalent to a wire in block <MC>.
+WARNING:Xst:1294 - Latch <XLXI_9/C_BUS_OUT_1> is equivalent to a wire in block <MC>.
+WARNING:Xst:1294 - Latch <XLXI_9/C_BUS_OUT_0> is equivalent to a wire in block <MC>.
+WARNING:Xst:2677 - Node <XLXI_9/A_PORT_REG_7> of sequential type is unconnected in block <MC>.
+WARNING:Xst:2677 - Node <XLXI_9/A_PORT_REG_6> of sequential type is unconnected in block <MC>.
+WARNING:Xst:2677 - Node <XLXI_9/A_PORT_REG_5> of sequential type is unconnected in block <MC>.
+WARNING:Xst:2677 - Node <XLXI_9/A_PORT_REG_4> of sequential type is unconnected in block <MC>.
+WARNING:Xst:2677 - Node <XLXI_9/A_PORT_REG_3> of sequential type is unconnected in block <MC>.
+WARNING:Xst:2677 - Node <XLXI_9/A_PORT_REG_2> of sequential type is unconnected in block <MC>.
+WARNING:Xst:2677 - Node <XLXI_9/A_PORT_REG_1> of sequential type is unconnected in block <MC>.
+WARNING:Xst:2677 - Node <XLXI_9/A_PORT_REG_0> of sequential type is unconnected in block <MC>.
+WARNING:Xst:2677 - Node <XLXI_9/SYNC_REG_A_7> of sequential type is unconnected in block <MC>.
+WARNING:Xst:2677 - Node <XLXI_9/SYNC_REG_A_6> of sequential type is unconnected in block <MC>.
+WARNING:Xst:2677 - Node <XLXI_9/SYNC_REG_A_5> of sequential type is unconnected in block <MC>.
+WARNING:Xst:2677 - Node <XLXI_9/SYNC_REG_A_4> of sequential type is unconnected in block <MC>.
+WARNING:Xst:2677 - Node <XLXI_9/SYNC_REG_A_3> of sequential type is unconnected in block <MC>.
+WARNING:Xst:2677 - Node <XLXI_9/SYNC_REG_A_2> of sequential type is unconnected in block <MC>.
+WARNING:Xst:2677 - Node <XLXI_9/SYNC_REG_A_1> of sequential type is unconnected in block <MC>.
+WARNING:Xst:2677 - Node <XLXI_9/SYNC_REG_A_0> of sequential type is unconnected in block <MC>.
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -484,46 +531,16 @@ WARNING:Xst:1898 - Due to constant pushing, FF/Latch <XLXI_6/FLIPFLOP_OUT_6> is 
 WARNING:Xst:1898 - Due to constant pushing, FF/Latch <XLXI_7/FLIPFLOP_OUT_6> is unconnected in block <MC>.
 WARNING:Xst:1898 - Due to constant pushing, FF/Latch <XLXI_6/FLIPFLOP_OUT_7> is unconnected in block <MC>.
 WARNING:Xst:1898 - Due to constant pushing, FF/Latch <XLXI_7/FLIPFLOP_OUT_7> is unconnected in block <MC>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <XLXI_5/FLIPFLOP_OUT_0> is unconnected in block <MC>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <XLXI_5/FLIPFLOP_OUT_1> is unconnected in block <MC>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <XLXI_5/FLIPFLOP_OUT_2> is unconnected in block <MC>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <XLXI_5/FLIPFLOP_OUT_3> is unconnected in block <MC>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <XLXI_5/FLIPFLOP_OUT_4> is unconnected in block <MC>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <XLXI_5/FLIPFLOP_OUT_5> is unconnected in block <MC>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <XLXI_5/FLIPFLOP_OUT_6> is unconnected in block <MC>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <XLXI_5/FLIPFLOP_OUT_7> is unconnected in block <MC>.
 INFO:Xst:2261 - The FF/Latch <XLXI_10/B_OUT_0> in Unit <MC> is equivalent to the following FF/Latch, which will be removed : <XLXI_9/SYNC_REG_B_0> 
-INFO:Xst:2261 - The FF/Latch <XLXI_10/A_OUT_4> in Unit <MC> is equivalent to the following FF/Latch, which will be removed : <XLXI_9/SYNC_REG_A_4> 
 INFO:Xst:2261 - The FF/Latch <XLXI_10/B_OUT_6> in Unit <MC> is equivalent to the following FF/Latch, which will be removed : <XLXI_9/SYNC_REG_B_6> 
 INFO:Xst:2261 - The FF/Latch <XLXI_10/B_OUT_1> in Unit <MC> is equivalent to the following FF/Latch, which will be removed : <XLXI_9/SYNC_REG_B_1> 
-INFO:Xst:2261 - The FF/Latch <XLXI_10/A_OUT_5> in Unit <MC> is equivalent to the following FF/Latch, which will be removed : <XLXI_9/SYNC_REG_A_5> 
-INFO:Xst:2261 - The FF/Latch <XLXI_10/A_OUT_0> in Unit <MC> is equivalent to the following FF/Latch, which will be removed : <XLXI_9/SYNC_REG_A_0> 
 INFO:Xst:2261 - The FF/Latch <XLXI_10/B_OUT_7> in Unit <MC> is equivalent to the following FF/Latch, which will be removed : <XLXI_9/SYNC_REG_B_7> 
 INFO:Xst:2261 - The FF/Latch <XLXI_10/B_OUT_2> in Unit <MC> is equivalent to the following FF/Latch, which will be removed : <XLXI_9/SYNC_REG_B_2> 
-INFO:Xst:2261 - The FF/Latch <XLXI_10/A_OUT_6> in Unit <MC> is equivalent to the following FF/Latch, which will be removed : <XLXI_9/SYNC_REG_A_6> 
-INFO:Xst:2261 - The FF/Latch <XLXI_10/A_OUT_1> in Unit <MC> is equivalent to the following FF/Latch, which will be removed : <XLXI_9/SYNC_REG_A_1> 
 INFO:Xst:2261 - The FF/Latch <XLXI_10/B_OUT_3> in Unit <MC> is equivalent to the following FF/Latch, which will be removed : <XLXI_9/SYNC_REG_B_3> 
-INFO:Xst:2261 - The FF/Latch <XLXI_10/A_OUT_7> in Unit <MC> is equivalent to the following FF/Latch, which will be removed : <XLXI_9/SYNC_REG_A_7> 
-INFO:Xst:2261 - The FF/Latch <XLXI_10/A_OUT_2> in Unit <MC> is equivalent to the following FF/Latch, which will be removed : <XLXI_9/SYNC_REG_A_2> 
+INFO:Xst:2261 - The FF/Latch <XLXI_4/FLIPFLOP_OUT_7> in Unit <MC> is equivalent to the following 7 FFs/Latches, which will be removed : <XLXI_4/FLIPFLOP_OUT_6> <XLXI_4/FLIPFLOP_OUT_5> <XLXI_4/FLIPFLOP_OUT_4> <XLXI_4/FLIPFLOP_OUT_3> <XLXI_4/FLIPFLOP_OUT_2> <XLXI_4/FLIPFLOP_OUT_1> <XLXI_4/FLIPFLOP_OUT_0> 
 INFO:Xst:2261 - The FF/Latch <XLXI_10/B_OUT_4> in Unit <MC> is equivalent to the following FF/Latch, which will be removed : <XLXI_9/SYNC_REG_B_4> 
-INFO:Xst:2261 - The FF/Latch <XLXI_10/A_OUT_3> in Unit <MC> is equivalent to the following FF/Latch, which will be removed : <XLXI_9/SYNC_REG_A_3> 
 INFO:Xst:2261 - The FF/Latch <XLXI_10/B_OUT_5> in Unit <MC> is equivalent to the following FF/Latch, which will be removed : <XLXI_9/SYNC_REG_B_5> 
-Found area constraint ratio of 100 (+ 5) on block MC, actual ratio is 1.
-FlipFlop XLXI_4/FLIPFLOP_OUT_6 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop XLXI_4/FLIPFLOP_OUT_5 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop XLXI_4/FLIPFLOP_OUT_4 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop XLXI_4/FLIPFLOP_OUT_3 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop XLXI_4/FLIPFLOP_OUT_2 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop XLXI_4/FLIPFLOP_OUT_1 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop XLXI_4/FLIPFLOP_OUT_0 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop XLXI_10/A_OUT_7 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop XLXI_10/A_OUT_6 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop XLXI_10/A_OUT_5 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop XLXI_10/A_OUT_4 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop XLXI_10/A_OUT_3 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop XLXI_10/A_OUT_2 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop XLXI_10/A_OUT_1 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop XLXI_10/A_OUT_0 has been replicated 1 time(s) to handle iob=true attribute.
+Found area constraint ratio of 100 (+ 5) on block MC, actual ratio is 0.
 FlipFlop XLXI_10/B_OUT_7 has been replicated 1 time(s) to handle iob=true attribute.
 FlipFlop XLXI_10/B_OUT_6 has been replicated 1 time(s) to handle iob=true attribute.
 FlipFlop XLXI_10/B_OUT_5 has been replicated 1 time(s) to handle iob=true attribute.
@@ -532,6 +549,7 @@ FlipFlop XLXI_10/B_OUT_3 has been replicated 1 time(s) to handle iob=true attrib
 FlipFlop XLXI_10/B_OUT_2 has been replicated 1 time(s) to handle iob=true attribute.
 FlipFlop XLXI_10/B_OUT_1 has been replicated 1 time(s) to handle iob=true attribute.
 FlipFlop XLXI_10/B_OUT_0 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop XLXI_4/FLIPFLOP_OUT_7 has been replicated 8 time(s) to handle iob=true attribute.
 
 Final Macro Processing ...
 
@@ -539,8 +557,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 88
- Flip-Flops                                            : 88
+# Registers                                            : 73
+ Flip-Flops                                            : 73
 
 =========================================================================
 
@@ -566,34 +584,33 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 56
+# IOs                              : 72
 
 Cell Usage :
-# BELS                             : 51
+# BELS                             : 38
 #      GND                         : 1
 #      INV                         : 2
-#      LUT2                        : 6
-#      LUT3                        : 9
-#      LUT3_L                      : 2
-#      LUT4                        : 21
-#      LUT4_D                      : 1
-#      MUXF5                       : 8
+#      LUT2                        : 3
+#      LUT3                        : 10
+#      LUT3_D                      : 1
+#      LUT3_L                      : 1
+#      LUT4                        : 18
+#      MUXF5                       : 1
 #      VCC                         : 1
-# FlipFlops/Latches                : 96
+# FlipFlops/Latches                : 73
 #      FD_1                        : 4
-#      FDC                         : 16
-#      FDCE                        : 32
-#      FDCP                        : 15
-#      FDE                         : 8
-#      FDE_1                       : 9
+#      FDC                         : 8
+#      FDCE                        : 24
+#      FDCP                        : 17
+#      FDE                         : 9
+#      FDE_1                       : 7
 #      FDR                         : 3
 #      FDS                         : 1
-#      LD_1                        : 8
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 55
+# IO Buffers                       : 71
 #      IBUF                        : 20
-#      OBUF                        : 35
+#      OBUF                        : 51
 =========================================================================
 
 Device utilization summary:
@@ -601,11 +618,11 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-5 
 
- Number of Slices:                       46  out of   4656     0%  
- Number of Slice Flip Flops:             72  out of   9312     0%  
- Number of 4 input LUTs:                 41  out of   9312     0%  
- Number of IOs:                          56
- Number of bonded IOBs:                  56  out of    232    24%  
+ Number of Slices:                       31  out of   4656     0%  
+ Number of Slice Flip Flops:             49  out of   9312     0%  
+ Number of 4 input LUTs:                 35  out of   9312     0%  
+ Number of IOs:                          72
+ Number of bonded IOBs:                  72  out of    232    31%  
     IOB Flip Flops:                      24
  Number of GCLKs:                         1  out of     24     4%  
 
@@ -627,34 +644,29 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------------------------------+----------------------------+-------+
-Clock Signal                                               | Clock buffer(FF name)      | Load  |
------------------------------------------------------------+----------------------------+-------+
-CLK                                                        | BUFGP                      | 88    |
-XLXI_9/C_BUS_OUT_cmp_eq0000(XLXI_9/C_BUS_OUT_cmp_eq00001:O)| NONE(*)(XLXI_9/C_BUS_OUT_7)| 8     |
------------------------------------------------------------+----------------------------+-------+
-(*) This 1 clock signal(s) are generated by combinatorial logic,
-and XST is not able to identify which are the primary clock signals.
-Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
-INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 73    |
+-----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
 -----------------------------------+------------------------+-------+
 Control Signal                     | Buffer(FF name)        | Load  |
 -----------------------------------+------------------------+-------+
-N1(XST_VCC:P)                      | NONE(XLXI_10/A_OUT_0)  | 63    |
-FF_PRESET                          | IBUF                   | 15    |
+N1(XST_VCC:P)                      | NONE(XLXI_10/A_OUT_0)  | 49    |
+FF_PRESET                          | IBUF                   | 17    |
 -----------------------------------+------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 5.491ns (Maximum Frequency: 182.110MHz)
-   Minimum input arrival time before clock: 3.565ns
-   Maximum output required time after clock: 4.040ns
-   Maximum combinational path delay: 4.726ns
+   Minimum period: 5.796ns (Maximum Frequency: 172.536MHz)
+   Minimum input arrival time before clock: 3.523ns
+   Maximum output required time after clock: 9.757ns
+   Maximum combinational path delay: 10.049ns
 
 Timing Detail:
 --------------
@@ -662,31 +674,32 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
-  Clock period: 5.491ns (frequency: 182.110MHz)
-  Total number of paths / destination ports: 101 / 57
+  Clock period: 5.796ns (frequency: 172.536MHz)
+  Total number of paths / destination ports: 92 / 55
 -------------------------------------------------------------------------
-Delay:               2.746ns (Levels of Logic = 1)
-  Source:            XLXI_33/State_0 (FF)
-  Destination:       XLXI_33/ADDR_To_ROM_5 (FF)
-  Source Clock:      CLK rising
-  Destination Clock: CLK falling
+Delay:               2.898ns (Levels of Logic = 2)
+  Source:            XLXI_33/ADDR_To_ROM_5 (FF)
+  Destination:       XLXI_31/ROM_DATA_0 (FF)
+  Source Clock:      CLK falling
+  Destination Clock: CLK rising
 
-  Data Path: XLXI_33/State_0 to XLXI_33/ADDR_To_ROM_5
+  Data Path: XLXI_33/ADDR_To_ROM_5 to XLXI_31/ROM_DATA_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDS:C->Q              4   0.514   0.568  XLXI_33/State_0 (XLXI_33/State_0)
-     LUT2:I1->O            6   0.612   0.569  XLXI_33/ADDR_To_ROM_not00011 (XLXI_33/ADDR_To_ROM_not0001)
-     FDE_1:CE                  0.483          XLXI_33/ADDR_To_ROM_0
+     FDE_1:C->Q            2   0.514   0.532  XLXI_33/ADDR_To_ROM_5 (XLXI_33/ADDR_To_ROM_5)
+     LUT3_D:I0->O          1   0.612   0.360  XLXI_31/Mrom_RDATA811_SW0 (N2)
+     LUT4:I3->O            1   0.612   0.000  XLXI_31/Mrom_RDATA121 (XLXI_31/RDATA<0>)
+     FDE:D                     0.268          XLXI_31/ROM_DATA_0
     ----------------------------------------
-    Total                      2.746ns (1.609ns logic, 1.137ns route)
-                                       (58.6% logic, 41.4% route)
+    Total                      2.898ns (2.006ns logic, 0.892ns route)
+                                       (69.2% logic, 30.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
-  Total number of paths / destination ports: 55 / 55
+  Total number of paths / destination ports: 45 / 45
 -------------------------------------------------------------------------
-Offset:              3.565ns (Levels of Logic = 2)
+Offset:              3.523ns (Levels of Logic = 2)
   Source:            Programme_Start (PAD)
   Destination:       XLXI_33/Counter_5 (FF)
   Destination Clock: CLK falling
@@ -695,39 +708,18 @@ Offset:              3.565ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             8   1.106   0.795  Programme_Start_IBUF (Programme_Start_IBUF)
+     IBUF:I->O             7   1.106   0.754  Programme_Start_IBUF (Programme_Start_IBUF)
      LUT2:I0->O            6   0.612   0.569  XLXI_33/Counter_not00011 (XLXI_33/Counter_not0001)
      FDE:CE                    0.483          XLXI_33/Counter_0
     ----------------------------------------
-    Total                      3.565ns (2.201ns logic, 1.364ns route)
-                                       (61.7% logic, 38.3% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_9/C_BUS_OUT_cmp_eq0000'
-  Total number of paths / destination ports: 2 / 1
--------------------------------------------------------------------------
-Offset:              2.718ns (Levels of Logic = 3)
-  Source:            ALU_T_CarryIn (PAD)
-  Destination:       XLXI_9/C_BUS_OUT_0 (LATCH)
-  Destination Clock: XLXI_9/C_BUS_OUT_cmp_eq0000 rising
-
-  Data Path: ALU_T_CarryIn to XLXI_9/C_BUS_OUT_0
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             3   1.106   0.454  ALU_T_CarryIn_IBUF (ALU_T_OutPut_0_OBUF)
-     LUT4:I3->O            1   0.612   0.000  XLXI_9/Mmux_C_BUS_OUT_mux000021 (XLXI_9/Mmux_C_BUS_OUT_mux00002)
-     MUXF5:I1->O           1   0.278   0.000  XLXI_9/Mmux_C_BUS_OUT_mux00002_f5 (XLXI_9/C_BUS_OUT_mux0000<0>)
-     LD_1:D                    0.268          XLXI_9/C_BUS_OUT_0
-    ----------------------------------------
-    Total                      2.718ns (2.264ns logic, 0.454ns route)
-                                       (83.3% logic, 16.7% route)
+    Total                      3.523ns (2.201ns logic, 1.322ns route)
+                                       (62.5% logic, 37.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
-  Total number of paths / destination ports: 26 / 26
+  Total number of paths / destination ports: 107 / 44
 -------------------------------------------------------------------------
-Offset:              4.040ns (Levels of Logic = 1)
+Offset:              9.757ns (Levels of Logic = 6)
   Source:            XLXI_4/FLIPFLOP_OUT_7 (FF)
   Destination:       ALU_TCarryOut (PAD)
   Source Clock:      CLK rising
@@ -736,41 +728,51 @@ Offset:              4.040ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCP:C->Q             1   0.514   0.357  XLXI_4/FLIPFLOP_OUT_7 (XLXI_4/FLIPFLOP_OUT_7)
+     FDCP:C->Q            15   0.514   0.867  XLXI_4/FLIPFLOP_OUT_7 (XLXI_4/FLIPFLOP_OUT_7)
+     LUT4:I3->O            3   0.612   0.520  XLXI_1/XLXI_3/vsum_2_or00031 (XLXI_1/XLXI_3/vsum_2_or0003)
+     LUT3:I1->O            2   0.612   0.410  XLXI_1/XLXI_3/carry_or00001 (XLXI_1/XLXI_3/carry_or0000)
+     LUT4:I2->O            2   0.612   0.449  XLXI_1/XLXI_3/vsum_5_or00031 (XLXI_1/XLXI_3/vsum_5_or0003)
+     LUT3:I1->O            2   0.612   0.410  XLXI_1/XLXI_3/carry_or00011 (XLXI_1/XLXI_3/carry_or0001)
+     LUT4:I2->O            1   0.612   0.357  XLXI_1/XLXI_3/Adder_carryout1 (ALU_TCarryOut_OBUF)
      OBUF:I->O                 3.169          ALU_TCarryOut_OBUF (ALU_TCarryOut)
     ----------------------------------------
-    Total                      4.040ns (3.683ns logic, 0.357ns route)
-                                       (91.2% logic, 8.8% route)
+    Total                      9.757ns (6.743ns logic, 3.014ns route)
+                                       (69.1% logic, 30.9% route)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 1 / 1
+  Total number of paths / destination ports: 10 / 9
 -------------------------------------------------------------------------
-Delay:               4.726ns (Levels of Logic = 2)
+Delay:               10.049ns (Levels of Logic = 7)
   Source:            ALU_T_CarryIn (PAD)
-  Destination:       ALU_T_OutPut<0> (PAD)
+  Destination:       ALU_TCarryOut (PAD)
 
-  Data Path: ALU_T_CarryIn to ALU_T_OutPut<0>
+  Data Path: ALU_T_CarryIn to ALU_TCarryOut
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             3   1.106   0.451  ALU_T_CarryIn_IBUF (ALU_T_OutPut_0_OBUF)
-     OBUF:I->O                 3.169          ALU_T_OutPut_0_OBUF (ALU_T_OutPut<0>)
+     IBUF:I->O             5   1.106   0.568  ALU_T_CarryIn_IBUF (ALU_T_CarryIn_IBUF)
+     LUT4:I2->O            3   0.612   0.520  XLXI_1/XLXI_3/vsum_2_or00031 (XLXI_1/XLXI_3/vsum_2_or0003)
+     LUT3:I1->O            2   0.612   0.410  XLXI_1/XLXI_3/carry_or00001 (XLXI_1/XLXI_3/carry_or0000)
+     LUT4:I2->O            2   0.612   0.449  XLXI_1/XLXI_3/vsum_5_or00031 (XLXI_1/XLXI_3/vsum_5_or0003)
+     LUT3:I1->O            2   0.612   0.410  XLXI_1/XLXI_3/carry_or00011 (XLXI_1/XLXI_3/carry_or0001)
+     LUT4:I2->O            1   0.612   0.357  XLXI_1/XLXI_3/Adder_carryout1 (ALU_TCarryOut_OBUF)
+     OBUF:I->O                 3.169          ALU_TCarryOut_OBUF (ALU_TCarryOut)
     ----------------------------------------
-    Total                      4.726ns (4.275ns logic, 0.451ns route)
-                                       (90.5% logic, 9.5% route)
+    Total                     10.049ns (7.335ns logic, 2.714ns route)
+                                       (73.0% logic, 27.0% route)
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 5.44 secs
+Total CPU time to Xst completion: 5.42 secs
  
 --> 
 
-Total memory usage is 268628 kilobytes
+Total memory usage is 268640 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  115 (   0 filtered)
-Number of infos    :   29 (   0 filtered)
+Number of warnings :  144 (   0 filtered)
+Number of infos    :   25 (   0 filtered)
 

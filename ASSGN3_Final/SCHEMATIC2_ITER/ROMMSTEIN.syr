@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: ROMMSTEIN.prj
 
@@ -105,8 +105,7 @@ Slice Utilization Ratio Delta      : 5
 *                          HDL Compilation                              *
 =========================================================================
 Compiling vhdl file "D:/ASSGN3_Final/SCHEMATIC2_ITER/ROMMSTEIN.vhd" in Library work.
-Entity <rommstein> compiled.
-Entity <rommstein> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity rommstein is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -172,8 +171,7 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1710 - FF/Latch <ROM_DATA_0> (without init value) has a constant value of 0 in block <ROMMSTEIN>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ROM_DATA_1> (without init value) has a constant value of 0 in block <ROMMSTEIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ROM_DATA_1> (without init value) has a constant value of 0 in block <ROMMSTEIN>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ROM_DATA_2> (without init value) has a constant value of 0 in block <ROMMSTEIN>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ROM_DATA_3> (without init value) has a constant value of 0 in block <ROMMSTEIN>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ROM_DATA_4> (without init value) has a constant value of 0 in block <ROMMSTEIN>. This FF/Latch will be trimmed during the optimization process.
@@ -191,8 +189,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 2
- Flip-Flops                                            : 2
+# Registers                                            : 3
+ Flip-Flops                                            : 3
 
 =========================================================================
 
@@ -221,12 +219,12 @@ Design Statistics
 # IOs                              : 16
 
 Cell Usage :
-# BELS                             : 4
+# BELS                             : 5
 #      GND                         : 1
 #      LUT3                        : 1
-#      LUT4                        : 2
-# FlipFlops/Latches                : 2
-#      FDE                         : 2
+#      LUT4                        : 3
+# FlipFlops/Latches                : 3
+#      FDE                         : 3
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 15
@@ -240,10 +238,10 @@ Device utilization summary:
 Selected Device : 3s500efg320-5 
 
  Number of Slices:                        2  out of   4656     0%  
- Number of 4 input LUTs:                  3  out of   9312     0%  
+ Number of 4 input LUTs:                  4  out of   9312     0%  
  Number of IOs:                          16
  Number of bonded IOBs:                  16  out of    232     6%  
-    IOB Flip Flops:                       2
+    IOB Flip Flops:                       3
  Number of GCLKs:                         1  out of     24     4%  
 
 ---------------------------
@@ -267,7 +265,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-CLK                                | BUFGP                  | 2     |
+CLK                                | BUFGP                  | 3     |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -279,7 +277,7 @@ Timing Summary:
 Speed Grade: -5
 
    Minimum period: No path found
-   Minimum input arrival time before clock: 3.556ns
+   Minimum input arrival time before clock: 3.710ns
    Maximum output required time after clock: 4.040ns
    Maximum combinational path delay: No path found
 
@@ -289,28 +287,28 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
-  Total number of paths / destination ports: 14 / 4
+  Total number of paths / destination ports: 21 / 6
 -------------------------------------------------------------------------
-Offset:              3.556ns (Levels of Logic = 3)
+Offset:              3.710ns (Levels of Logic = 3)
   Source:            ROM_ADDR<3> (PAD)
-  Destination:       ROM_DATA_7 (FF)
+  Destination:       ROM_DATA_0 (FF)
   Destination Clock: CLK rising
 
-  Data Path: ROM_ADDR<3> to ROM_DATA_7
+  Data Path: ROM_ADDR<3> to ROM_DATA_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             1   1.106   0.509  ROM_ADDR_3_IBUF (ROM_ADDR_3_IBUF)
-     LUT3:I0->O            2   0.612   0.449  Mrom_RDATA71121 (N2)
-     LUT4:I1->O            1   0.612   0.000  Mrom_RDATA9111 (RDATA<7>)
-     FDE:D                     0.268          ROM_DATA_7
+     LUT3:I0->O            3   0.612   0.603  Mrom_RDATA12121 (N3)
+     LUT4:I0->O            1   0.612   0.000  Mrom_RDATA8111 (RDATA<6>)
+     FDE:D                     0.268          ROM_DATA_6
     ----------------------------------------
-    Total                      3.556ns (2.598ns logic, 0.958ns route)
-                                       (73.1% logic, 26.9% route)
+    Total                      3.710ns (2.598ns logic, 1.112ns route)
+                                       (70.0% logic, 30.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
-  Total number of paths / destination ports: 2 / 2
+  Total number of paths / destination ports: 3 / 3
 -------------------------------------------------------------------------
 Offset:              4.040ns (Levels of Logic = 1)
   Source:            ROM_DATA_7 (FF)
@@ -331,13 +329,13 @@ Offset:              4.040ns (Levels of Logic = 1)
 
 
 Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.62 secs
+Total CPU time to Xst completion: 5.20 secs
  
 --> 
 
-Total memory usage is 251372 kilobytes
+Total memory usage is 251400 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    7 (   0 filtered)
+Number of warnings :    6 (   0 filtered)
 Number of infos    :    1 (   0 filtered)
 

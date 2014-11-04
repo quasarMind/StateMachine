@@ -1,4 +1,4 @@
--- Vhdl test bench created from schematic D:\ASSGN3_Final\SCHEMATIC2_ITER\MC.sch - Mon Oct 27 11:15:02 2014
+-- Vhdl test bench created from schematic D:\ASSGN3_Final\SCHEMATIC2_ITER\MC.sch - Wed Oct 29 17:52:30 2014
 --
 -- Notes: 
 -- 1) This testbench template has been automatically generated using types
@@ -23,6 +23,8 @@ ARCHITECTURE behavioral OF MC_MC_sch_tb IS
 
    COMPONENT MC
    PORT( ALU_T_CarryIn	:	IN	STD_LOGIC; 
+          ALU_IN1	:	OUT	STD_LOGIC_VECTOR (7 DOWNTO 0); 
+          ALU_IN2	:	OUT	STD_LOGIC_VECTOR (7 DOWNTO 0); 
           ALU_TCarryOut	:	OUT	STD_LOGIC; 
           ALU_T_OutPut	:	OUT	STD_LOGIC_VECTOR (7 DOWNTO 0); 
           CLK	:	IN	STD_LOGIC; 
@@ -39,6 +41,8 @@ ARCHITECTURE behavioral OF MC_MC_sch_tb IS
    END COMPONENT;
 
    SIGNAL ALU_T_CarryIn	:	STD_LOGIC;
+   SIGNAL ALU_IN1	:	STD_LOGIC_VECTOR (7 DOWNTO 0);
+   SIGNAL ALU_IN2	:	STD_LOGIC_VECTOR (7 DOWNTO 0);
    SIGNAL ALU_TCarryOut	:	STD_LOGIC;
    SIGNAL ALU_T_OutPut	:	STD_LOGIC_VECTOR (7 DOWNTO 0);
    SIGNAL CLK	:	STD_LOGIC;
@@ -52,12 +56,14 @@ ARCHITECTURE behavioral OF MC_MC_sch_tb IS
    SIGNAL ReRun	:	STD_LOGIC;
    SIGNAL A_InPort	:	STD_LOGIC_VECTOR (7 DOWNTO 0);
    SIGNAL B_InPort	:	STD_LOGIC_VECTOR (7 DOWNTO 0);
--- Clock period definitions
+ -- Clock period definitions
    constant CLK_period : time := 10 ns;
 BEGIN
 
    UUT: MC PORT MAP(
 		ALU_T_CarryIn => ALU_T_CarryIn, 
+		ALU_IN1 => ALU_IN1, 
+		ALU_IN2 => ALU_IN2, 
 		ALU_TCarryOut => ALU_TCarryOut, 
 		ALU_T_OutPut => ALU_T_OutPut, 
 		CLK => CLK, 
@@ -72,7 +78,7 @@ BEGIN
 		A_InPort => A_InPort, 
 		B_InPort => B_InPort
    );
--- Clock process definitions
+	-- Clock process definitions
    CLK_process :process
    begin
 		CLK <= '0';
@@ -83,6 +89,8 @@ BEGIN
 -- *** Test Bench - User Defined Section ***
    tb : PROCESS
    BEGIN
+	
+	
 	FF_PRESET <= '0';
 	ALU_T_CarryIn <= '0';
 	A_InPort <= "00000001";

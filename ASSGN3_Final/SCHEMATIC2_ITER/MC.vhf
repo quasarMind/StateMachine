@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : MC.vhf
--- /___/   /\     Timestamp : 10/27/2014 11:01:33
+-- /___/   /\     Timestamp : 10/29/2014 17:51:29
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -105,6 +105,8 @@ entity MC is
           FF_PRESET       : in    std_logic; 
           Programme_Start : in    std_logic; 
           ReRun           : in    std_logic; 
+          ALU_IN1         : out   std_logic_vector (7 downto 0); 
+          ALU_IN2         : out   std_logic_vector (7 downto 0); 
           ALU_TCarryOut   : out   std_logic; 
           ALU_T_OutPut    : out   std_logic_vector (7 downto 0); 
           Dbg_En_A_PORT_A : out   std_logic; 
@@ -115,8 +117,6 @@ entity MC is
 end MC;
 
 architecture BEHAVIORAL of MC is
-   signal XLXN_3                : std_logic_vector (7 downto 0);
-   signal XLXN_4                : std_logic_vector (7 downto 0);
    signal XLXN_7                : std_logic_vector (7 downto 0);
    signal XLXN_8                : std_logic_vector (7 downto 0);
    signal XLXN_9                : std_logic_vector (7 downto 0);
@@ -136,6 +136,8 @@ architecture BEHAVIORAL of MC is
    signal XLXN_119              : std_logic_vector (1 downto 0);
    signal Dbg_En_A_PORT_A_DUMMY : std_logic;
    signal Dbg_En_A_PORT_B_DUMMY : std_logic;
+   signal ALU_IN1_DUMMY         : std_logic_vector (7 downto 0);
+   signal ALU_IN2_DUMMY         : std_logic_vector (7 downto 0);
    signal ALU_T_OutPut_DUMMY    : std_logic_vector (7 downto 0);
    signal Dbg_ROM_DATA_DUMMY    : std_logic_vector (7 downto 0);
    component ALU_T_MUSER_MC
@@ -222,14 +224,16 @@ architecture BEHAVIORAL of MC is
    end component;
    
 begin
+   ALU_IN1(7 downto 0) <= ALU_IN1_DUMMY(7 downto 0);
+   ALU_IN2(7 downto 0) <= ALU_IN2_DUMMY(7 downto 0);
    ALU_T_OutPut(7 downto 0) <= ALU_T_OutPut_DUMMY(7 downto 0);
    Dbg_En_A_PORT_A <= Dbg_En_A_PORT_A_DUMMY;
    Dbg_En_A_PORT_B <= Dbg_En_A_PORT_B_DUMMY;
    Dbg_ROM_DATA(7 downto 0) <= Dbg_ROM_DATA_DUMMY(7 downto 0);
    XLXI_1 : ALU_T_MUSER_MC
       port map (Adder_CarryIn=>ALU_T_CarryIn,
-                Input1(7 downto 0)=>XLXN_3(7 downto 0),
-                Input2(7 downto 0)=>XLXN_4(7 downto 0),
+                Input1(7 downto 0)=>ALU_IN1_DUMMY(7 downto 0),
+                Input2(7 downto 0)=>ALU_IN2_DUMMY(7 downto 0),
                 MUX_Select(1 downto 0)=>XLXN_119(1 downto 0),
                 Adder_CarryOut=>ALU_TCarryOut,
                 OutPut(7 downto 0)=>ALU_T_OutPut_DUMMY(7 downto 0));
@@ -240,7 +244,7 @@ begin
                 MUX_PIN3(7 downto 0)=>XLXN_9(7 downto 0),
                 MUX_PIN4(7 downto 0)=>XLXN_10(7 downto 0),
                 MUX_SEL(1 downto 0)=>XLXN_96(1 downto 0),
-                MUX_OUT(7 downto 0)=>XLXN_3(7 downto 0));
+                MUX_OUT(7 downto 0)=>ALU_IN1_DUMMY(7 downto 0));
    
    XLXI_3 : MUX4to1
       port map (MUX_PIN1(7 downto 0)=>XLXN_7(7 downto 0),
@@ -248,7 +252,7 @@ begin
                 MUX_PIN3(7 downto 0)=>XLXN_9(7 downto 0),
                 MUX_PIN4(7 downto 0)=>XLXN_10(7 downto 0),
                 MUX_SEL(1 downto 0)=>XLXN_97(1 downto 0),
-                MUX_OUT(7 downto 0)=>XLXN_4(7 downto 0));
+                MUX_OUT(7 downto 0)=>ALU_IN2_DUMMY(7 downto 0));
    
    XLXI_4 : FLIPFLOP
       port map (CLK=>CLK,

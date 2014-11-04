@@ -46,7 +46,7 @@ architecture Behavioral of ROMMSTEIN is
 
 type ROM_TYPE is array(0 to 63) of STD_LOGIC_VECTOR (7 downto 0);
 signal ROM_SIGNAL: ROM_TYPE :=(	
-												X"40",X"80",X"00",X"80",X"00",X"C0",X"00",X"00", --1---8
+												X"40",X"80",X"00",X"81",X"01",X"C0",X"00",X"00", --1---8
 												X"00",X"00",X"00",X"00",X"00",X"00",X"00",X"00", --9--16
 												X"00",X"00",X"00",X"00",X"00",X"00",X"00",X"00", --17-24
 												X"00",X"00",X"00",X"00",X"00",X"00",X"00",X"00", --25-32 

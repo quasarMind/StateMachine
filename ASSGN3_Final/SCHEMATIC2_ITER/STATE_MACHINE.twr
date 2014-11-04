@@ -45,8 +45,8 @@ Setup/Hold to clock CLK
                 |Max Setup to|Max Hold to |                  | Clock  |
 Source          | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ----------------+------------+------------+------------------+--------+
-Programme_Start |    1.333(F)|    1.394(F)|CLK_BUFGP         |   0.000|
-Re_Run_Programme|    0.645(R)|    1.113(R)|CLK_BUFGP         |   0.000|
+Programme_Start |    2.234(F)|    0.873(F)|CLK_BUFGP         |   0.000|
+Re_Run_Programme|    1.198(R)|    0.757(R)|CLK_BUFGP         |   0.000|
 ----------------+------------+------------+------------------+--------+
 
 Clock CLK to Pad
@@ -54,15 +54,13 @@ Clock CLK to Pad
               | clk (edge) |                  | Clock  |
 Destination   |   to PAD   |Internal Clock(s) | Phase  |
 --------------+------------+------------------+--------+
-ADDR_To_ROM<0>|    6.725(F)|CLK_BUFGP         |   0.000|
-ADDR_To_ROM<1>|    6.961(F)|CLK_BUFGP         |   0.000|
-ADDR_To_ROM<2>|    6.775(F)|CLK_BUFGP         |   0.000|
-ADDR_To_ROM<3>|    6.953(F)|CLK_BUFGP         |   0.000|
-ADDR_To_ROM<4>|    6.948(F)|CLK_BUFGP         |   0.000|
-ADDR_To_ROM<5>|    6.968(F)|CLK_BUFGP         |   0.000|
-BUS_Select<0> |    6.965(F)|CLK_BUFGP         |   0.000|
-BUS_Select<1> |    6.988(F)|CLK_BUFGP         |   0.000|
-EN_OUT        |    7.047(F)|CLK_BUFGP         |   0.000|
+ADDR_To_ROM<0>|    6.985(F)|CLK_BUFGP         |   0.000|
+ADDR_To_ROM<1>|    6.468(F)|CLK_BUFGP         |   0.000|
+ADDR_To_ROM<2>|    7.306(F)|CLK_BUFGP         |   0.000|
+ADDR_To_ROM<3>|    7.018(F)|CLK_BUFGP         |   0.000|
+ADDR_To_ROM<4>|    6.949(F)|CLK_BUFGP         |   0.000|
+ADDR_To_ROM<5>|    6.484(F)|CLK_BUFGP         |   0.000|
+EN_OUT        |    6.568(F)|CLK_BUFGP         |   0.000|
 --------------+------------+------------------+--------+
 
 Clock to Setup on destination clock CLK
@@ -70,11 +68,11 @@ Clock to Setup on destination clock CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |         |    2.134|    2.642|    4.246|
+CLK            |         |    2.596|    2.692|    2.686|
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Mon Oct 27 11:13:52 2014 
+Analysis completed Wed Oct 29 17:49:00 2014 
 --------------------------------------------------------------------------------
 
 Trace Settings:

@@ -5,25 +5,25 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <DeviceUsageSummary rev="1">
-<DesignStatistics TimeStamp="Mon Oct 27 11:14:29 2014"><group name="MiscellaneousStatistics">
+<DesignStatistics TimeStamp="Wed Oct 29 17:51:54 2014"><group name="MiscellaneousStatistics">
 <item name="AGG_BONDED_IO" rev="1">
-<attrib name="value" value="39"/></item>
+<attrib name="value" value="55"/></item>
 <item name="AGG_IO" rev="1">
-<attrib name="value" value="39"/></item>
+<attrib name="value" value="55"/></item>
 <item name="AGG_SLICE" rev="1">
-<attrib name="value" value="16"/></item>
-<item name="NUM_4_INPUT_LUT" rev="1">
 <attrib name="value" value="17"/></item>
+<item name="NUM_4_INPUT_LUT" rev="1">
+<attrib name="value" value="18"/></item>
 <item name="NUM_BONDED_IBUF" rev="1">
 <attrib name="value" value="4"/></item>
 <item name="NUM_BONDED_IOB" rev="1">
-<attrib name="value" value="35"/></item>
+<attrib name="value" value="51"/></item>
 <item name="NUM_BUFGMUX" rev="1">
 <attrib name="value" value="1"/></item>
 <item name="NUM_SLICEL" rev="1">
-<attrib name="value" value="16"/></item>
+<attrib name="value" value="17"/></item>
 <item name="NUM_SLICE_FF" rev="1">
-<attrib name="value" value="23"/></item>
+<attrib name="value" value="24"/></item>
 </group>
 </DesignStatistics>
 <CmdHistory>

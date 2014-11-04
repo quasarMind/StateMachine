@@ -11,7 +11,7 @@
 <msg type="info" file="NetListWriters" num="0" delta="new" >Xilinx recommends running separate simulations to check for setup by specifying the MAX field in the SDF file and for hold by specifying the MIN field in the SDF file. Please refer to Simulator documentation for more details on specifying MIN and MAX field in the SDF.
 </msg>
 
-<msg type="info" file="NetListWriters" num="665" delta="old" >For more information on how to pass the SDF switches to the simulator, see your Simulator tool documentation.
+<msg type="info" file="NetListWriters" num="665" delta="new" >For more information on how to pass the SDF switches to the simulator, see your Simulator tool documentation.
 </msg>
 
 </messages>

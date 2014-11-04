@@ -1,0 +1,2 @@
+vhdl work "netgen/translate/MC_translate.vhd"
+vhdl work "MC_TEST.vhd"

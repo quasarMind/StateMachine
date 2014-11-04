@@ -44,13 +44,13 @@ Setup/Hold to clock CLK
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-ENABLE_ROM  |    0.075(R)|    1.178(R)|CLK_BUFGP         |   0.000|
-ROM_ADDR<0> |    2.027(R)|   -0.037(R)|CLK_BUFGP         |   0.000|
-ROM_ADDR<1> |    1.832(R)|    0.151(R)|CLK_BUFGP         |   0.000|
-ROM_ADDR<2> |    1.529(R)|    0.027(R)|CLK_BUFGP         |   0.000|
-ROM_ADDR<3> |    2.232(R)|   -0.152(R)|CLK_BUFGP         |   0.000|
-ROM_ADDR<4> |    2.110(R)|   -0.055(R)|CLK_BUFGP         |   0.000|
-ROM_ADDR<5> |    2.344(R)|   -0.242(R)|CLK_BUFGP         |   0.000|
+ENABLE_ROM  |    0.381(R)|    0.995(R)|CLK_BUFGP         |   0.000|
+ROM_ADDR<0> |    2.052(R)|    0.467(R)|CLK_BUFGP         |   0.000|
+ROM_ADDR<1> |    1.542(R)|    0.334(R)|CLK_BUFGP         |   0.000|
+ROM_ADDR<2> |    1.474(R)|    0.242(R)|CLK_BUFGP         |   0.000|
+ROM_ADDR<3> |    1.772(R)|   -0.152(R)|CLK_BUFGP         |   0.000|
+ROM_ADDR<4> |    1.650(R)|   -0.055(R)|CLK_BUFGP         |   0.000|
+ROM_ADDR<5> |    1.884(R)|   -0.242(R)|CLK_BUFGP         |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock CLK to Pad
@@ -58,12 +58,13 @@ Clock CLK to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-ROM_DATA<6> |    5.597(R)|CLK_BUFGP         |   0.000|
+ROM_DATA<0> |    5.610(R)|CLK_BUFGP         |   0.000|
+ROM_DATA<6> |    5.610(R)|CLK_BUFGP         |   0.000|
 ROM_DATA<7> |    5.597(R)|CLK_BUFGP         |   0.000|
 ------------+------------+------------------+--------+
 
 
-Analysis completed Sun Oct 26 19:14:43 2014 
+Analysis completed Wed Oct 29 17:08:13 2014 
 --------------------------------------------------------------------------------
 
 Trace Settings:

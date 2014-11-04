@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-SAM-PC::  Sun Oct 26 19:14:34 2014
+SAM-PC::  Wed Oct 29 17:50:50 2014
 
 par -w -intstyle ise -ol high -t 1 ROMMSTEIN_map.ncd ROMMSTEIN.ncd
 ROMMSTEIN.pcf 
@@ -85,16 +85,16 @@ Phase 8.5  Local Placement Optimization (Checksum:5a063182) REAL time: 1 secs
 
 Phase 9.8  Global Placement
 ..
-Phase 9.8  Global Placement (Checksum:c9e90eca) REAL time: 1 secs 
+Phase 9.8  Global Placement (Checksum:c9fb3172) REAL time: 1 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:c9e90eca) REAL time: 1 secs 
+Phase 10.5  Local Placement Optimization (Checksum:c9fb3172) REAL time: 1 secs 
 
 Phase 11.18  Placement Optimization
-Phase 11.18  Placement Optimization (Checksum:c5093211) REAL time: 1 secs 
+Phase 11.18  Placement Optimization (Checksum:c66446c9) REAL time: 1 secs 
 
 Phase 12.5  Local Placement Optimization
-Phase 12.5  Local Placement Optimization (Checksum:c5093211) REAL time: 1 secs 
+Phase 12.5  Local Placement Optimization (Checksum:c66446c9) REAL time: 1 secs 
 
 Total REAL time to Placer completion: 1 secs 
 Total CPU  time to Placer completion: 1 secs 
@@ -105,13 +105,13 @@ Writing design to file ROMMSTEIN.ncd
 Starting Router
 
 
-Phase  1  : 25 unrouted;      REAL time: 4 secs 
+Phase  1  : 31 unrouted;      REAL time: 5 secs 
 
-Phase  2  : 22 unrouted;      REAL time: 4 secs 
+Phase  2  : 27 unrouted;      REAL time: 5 secs 
 
-Phase  3  : 4 unrouted;      REAL time: 4 secs 
+Phase  3  : 7 unrouted;      REAL time: 5 secs 
 
-Phase  4  : 4 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
+Phase  4  : 7 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
 
 Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
 
@@ -144,7 +144,7 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|           CLK_BUFGP | BUFGMUX_X2Y10| No   |    2 |  0.000     |  0.145      |
+|           CLK_BUFGP | BUFGMUX_X2Y10| No   |    3 |  0.013     |  0.158      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -173,7 +173,7 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 5 secs 
+Total REAL time to PAR completion: 6 secs 
 Total CPU time to PAR completion: 5 secs 
 
 Peak Memory Usage:  313 MB

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="ROMMSTEIN">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2014-10-26T18:3:47</timestamp>
+    <timestamp>2014-10-29T16:51:10</timestamp>
     <pin polarity="Input" x="0" y="-160" name="CLK" />
     <pin polarity="Input" x="0" y="-96" name="ENABLE_ROM" />
     <pin polarity="Input" x="0" y="-32" name="ROM_ADDR(5:0)" />

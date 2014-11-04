@@ -7,8 +7,8 @@
     </attr>
     <netlist>
         <signal name="ALU_T_CarryIn" />
-        <signal name="XLXN_3(7:0)" />
-        <signal name="XLXN_4(7:0)" />
+        <signal name="ALU_IN1(7:0)" />
+        <signal name="ALU_IN2(7:0)" />
         <signal name="ALU_TCarryOut" />
         <signal name="ALU_T_OutPut(7:0)" />
         <signal name="XLXN_7(7:0)" />
@@ -28,10 +28,8 @@
         <signal name="Dbg_En_A_PORT_B" />
         <signal name="XLXN_94" />
         <signal name="XLXN_95(1:0)" />
-        <signal name="XLXN_96(1:0)">
-        </signal>
-        <signal name="XLXN_97(1:0)">
-        </signal>
+        <signal name="XLXN_96(1:0)" />
+        <signal name="XLXN_97(1:0)" />
         <signal name="Programme_Start" />
         <signal name="Dbg_ROM_DATA(7:0)" />
         <signal name="XLXN_104" />
@@ -40,9 +38,10 @@
         <signal name="A_InPort(7:0)" />
         <signal name="B_InPort(7:0)" />
         <signal name="XLXN_117(5:0)" />
-        <signal name="XLXN_119(1:0)">
-        </signal>
+        <signal name="XLXN_119(1:0)" />
         <port polarity="Input" name="ALU_T_CarryIn" />
+        <port polarity="Output" name="ALU_IN1(7:0)" />
+        <port polarity="Output" name="ALU_IN2(7:0)" />
         <port polarity="Output" name="ALU_TCarryOut" />
         <port polarity="Output" name="ALU_T_OutPut(7:0)" />
         <port polarity="Input" name="CLK" />
@@ -148,7 +147,7 @@
             <line x2="464" y1="-32" y2="-32" x1="400" />
         </blockdef>
         <blockdef name="ROMMSTEIN">
-            <timestamp>2014-10-26T18:3:47</timestamp>
+            <timestamp>2014-10-29T16:51:10</timestamp>
             <rect width="368" x="64" y="-192" height="192" />
             <line x2="0" y1="-160" y2="-160" x1="64" />
             <line x2="0" y1="-96" y2="-96" x1="64" />
@@ -158,7 +157,7 @@
             <line x2="496" y1="-160" y2="-160" x1="432" />
         </blockdef>
         <blockdef name="STATE_MACHINE">
-            <timestamp>2014-10-27T9:8:25</timestamp>
+            <timestamp>2014-10-29T16:49:16</timestamp>
             <line x2="576" y1="288" y2="288" x1="512" />
             <rect width="64" x="512" y="20" height="24" />
             <line x2="576" y1="32" y2="32" x1="512" />
@@ -186,8 +185,8 @@
         <block symbolname="ALU_T" name="XLXI_1">
             <blockpin signalname="XLXN_119(1:0)" name="MUX_Select(1:0)" />
             <blockpin signalname="ALU_T_CarryIn" name="Adder_CarryIn" />
-            <blockpin signalname="XLXN_3(7:0)" name="Input1(7:0)" />
-            <blockpin signalname="XLXN_4(7:0)" name="Input2(7:0)" />
+            <blockpin signalname="ALU_IN1(7:0)" name="Input1(7:0)" />
+            <blockpin signalname="ALU_IN2(7:0)" name="Input2(7:0)" />
             <blockpin signalname="ALU_TCarryOut" name="Adder_CarryOut" />
             <blockpin signalname="ALU_T_OutPut(7:0)" name="OutPut(7:0)" />
         </block>
@@ -197,7 +196,7 @@
             <blockpin signalname="XLXN_9(7:0)" name="MUX_PIN3(7:0)" />
             <blockpin signalname="XLXN_10(7:0)" name="MUX_PIN4(7:0)" />
             <blockpin signalname="XLXN_96(1:0)" name="MUX_SEL(1:0)" />
-            <blockpin signalname="XLXN_3(7:0)" name="MUX_OUT(7:0)" />
+            <blockpin signalname="ALU_IN1(7:0)" name="MUX_OUT(7:0)" />
         </block>
         <block symbolname="MUX4to1" name="XLXI_3">
             <blockpin signalname="XLXN_7(7:0)" name="MUX_PIN1(7:0)" />
@@ -205,7 +204,7 @@
             <blockpin signalname="XLXN_9(7:0)" name="MUX_PIN3(7:0)" />
             <blockpin signalname="XLXN_10(7:0)" name="MUX_PIN4(7:0)" />
             <blockpin signalname="XLXN_97(1:0)" name="MUX_SEL(1:0)" />
-            <blockpin signalname="XLXN_4(7:0)" name="MUX_OUT(7:0)" />
+            <blockpin signalname="ALU_IN2(7:0)" name="MUX_OUT(7:0)" />
         </block>
         <block symbolname="FLIPFLOP" name="XLXI_4">
             <blockpin signalname="XLXN_94" name="FLIPFLOP_RESET" />
@@ -296,15 +295,19 @@
         </branch>
         <instance x="1968" y="768" name="XLXI_2" orien="R0">
         </instance>
-        <branch name="XLXN_3(7:0)">
-            <wire x2="3024" y1="480" y2="480" x1="2432" />
+        <branch name="ALU_IN1(7:0)">
+            <wire x2="2640" y1="480" y2="480" x1="2432" />
+            <wire x2="3024" y1="480" y2="480" x1="2640" />
+            <wire x2="2640" y1="480" y2="720" x1="2640" />
         </branch>
         <instance x="1968" y="1184" name="XLXI_3" orien="R0">
         </instance>
-        <branch name="XLXN_4(7:0)">
+        <branch name="ALU_IN2(7:0)">
             <wire x2="2480" y1="896" y2="896" x1="2432" />
             <wire x2="2480" y1="544" y2="896" x1="2480" />
-            <wire x2="3024" y1="544" y2="544" x1="2480" />
+            <wire x2="2736" y1="544" y2="544" x1="2480" />
+            <wire x2="3024" y1="544" y2="544" x1="2736" />
+            <wire x2="2736" y1="544" y2="720" x1="2736" />
         </branch>
         <branch name="ALU_TCarryOut">
             <wire x2="3536" y1="352" y2="352" x1="3504" />
@@ -547,5 +550,7 @@
             <wire x2="4064" y1="176" y2="3056" x1="4064" />
         </branch>
         <iomarker fontsize="28" x="608" y="3104" name="Dbg_ROM_DATA(7:0)" orien="R180" />
+        <iomarker fontsize="28" x="2640" y="720" name="ALU_IN1(7:0)" orien="R90" />
+        <iomarker fontsize="28" x="2736" y="720" name="ALU_IN2(7:0)" orien="R90" />
     </sheet>
 </drawing>

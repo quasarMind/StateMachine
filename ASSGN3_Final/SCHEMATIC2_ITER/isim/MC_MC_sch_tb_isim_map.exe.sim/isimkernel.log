@@ -4,28 +4,28 @@ Command line:
      -sdfmax  /UUT/=netgen/map/MC_map.sdf
      -sdfroot  /UUT
      -simrunnum  0
-     -socket  65021
+     -socket  55327
 
-Sun Oct 26 19:07:28 2014
+Wed Oct 29 17:29:31 2014
 
 
- Elaboration Time: 0.15625 sec
+ Elaboration Time: 0.203125 sec
 
- Current Memory Usage: 1016.72 Meg
+ Current Memory Usage: 867.828 Meg
 
- Total Signals          : 398
- Total Nets             : 270
- Total Signal Drivers   : 183
- Total Blocks           : 162
- Total Primitive Blocks : 85
- Total Processes        : 179
- Total Traceable Variables  : 640
- Total Scalar Nets and Variables : 6476
-Total Line Count : 1118
+ Total Signals          : 1930
+ Total Nets             : 1263
+ Total Signal Drivers   : 1153
+ Total Blocks           : 581
+ Total Primitive Blocks : 308
+ Total Processes        : 1149
+ Total Traceable Variables  : 2970
+ Total Scalar Nets and Variables : 12974
+Total Line Count : 4746
 
- Total Simulation Time: 0.171875 sec
+ Total Simulation Time: 0.3125 sec
 
- Current Memory Usage: 1016.72 Meg
+ Current Memory Usage: 867.795 Meg
 
-Sun Oct 26 19:07:57 2014
+Wed Oct 29 17:30:24 2014
 
